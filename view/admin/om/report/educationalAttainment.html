@@ -1,0 +1,462 @@
+<style>
+    .main-footer {
+        background: #fff;
+        padding: 5px;
+        color: #444;
+        border-top: 1px solid #d2d6de;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        z-index: 999;
+    }
+    .content-wrapper{
+        background:white
+    }
+    .example2 th{
+        color:white;
+        background-color: #006ba6;
+        text-align:center
+    }
+    .btnTD{
+        text-align:center;
+    }
+    .info{
+        font-weight: bold;
+    }
+    .ui-widget-header {
+        border: 1px solid green;
+        background: #008d4c;
+        color:black;
+    }
+    .lightbox-modal{
+        z-index:99999 !important;
+    }
+    .bder{
+        border:0px solid black;
+    }
+    .table-striped>tbody>tr:nth-child(odd)>td, 
+    .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #d9e5f3;
+    }
+    table.dataTable>tbody>tr.child ul li {
+        border-bottom: 0px solid #efefef !important;
+    }	
+    .req-field {
+        color: red;
+    }
+    .paddingZero{
+        padding: 0px !important;
+    }
+    .fixwidth {
+		width: 50px !important;
+	}
+	.lbltbl{
+		font-weight:bold;
+		font-size:10pt;	
+		text-align:right;
+		padding:5px !important;
+		width:140px !important;
+	}
+	.datatbl{
+		text-indent:5px;
+		padding:5px !important;
+		font-size:9pt;
+		width:210px !important;
+	}
+	.print-only{
+		display: none;
+	}
+	
+	@media print {
+		.no-print {
+			display: none;
+		}
+	
+		.print-only{
+			display: block;
+		}
+	}
+	
+	.sec-head{
+		overflow:hidden;
+		animation: bgColor 8s normal forwards;
+	}	
+	.bgPulse{
+		width: 100%;
+		height: 100%;
+	}	
+	.bgPulse span{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		background: #fff;
+		
+	}	
+	.bgPulse span:nth-child(2n+1){
+		background: transparent;
+		border: 5px solid #fff;
+	}	
+	.bgPulse span:nth-child(1){
+		border-radius:12px;
+		top: 30%;
+		left: 30%;
+		animation: animate 10s linear infinite;
+	}	
+	.bgPulse span:nth-child(2){
+		top: 20%;
+		left: 50%;
+		animation: animate 15s linear infinite;
+	}	
+	.bgPulse span:nth-child(3){
+		top: 40%;
+		left: 70%;
+		animation: animate 20s linear infinite;
+	}	
+	.bgPulse span:nth-child(4){
+		border-radius:12px;
+		top: 60%;
+		left: 80%;
+		animation: animate 12s linear infinite;
+	}
+	.bgPulse span:nth-child(5){
+		top: 60%;
+		left: 40%;
+		animation: animate 17s linear infinite;
+	}
+	.bgPulse span:nth-child(6){
+		border-radius:12px;
+		top: 60%;
+		left: 60%;
+		animation: animate 22s linear infinite;
+	}
+	.bgPulse span:nth-child(7){
+		top: 60%;
+		left: 20%;
+		animation: animate 17s linear infinite;
+	}	
+	@keyframes animate{
+		0% { transform: scale(0) translateY(0) rotate(0deg); opacity: 0; }
+		50% { opacity: 0.4; }
+		100% { transform: scale(1) translateY(-100px) rotate(360deg); opacity: 1; }
+	}
+	@keyframes bgColor{
+		0%   { background: #00f383 ;  }
+		25%  { background: #00d976 ;  }
+		50%  { background: #00c068 ;  }
+		100% { background: #00a65a ;  }
+	}
+    .background{
+        /* width: 100%; */
+        color:white;
+        background-color: #00a65a;
+        text-align:center
+    }
+    /* freeze Header */
+	tbody {
+		display:block;
+		overflow:auto;
+	}
+	thead, tbody tr {
+		display:table;
+		width:100%;
+		table-layout:fixed;
+	}
+
+    /** Jerald*/
+    .select2-container--default .select2-selection--single {
+		border: none !important;
+		border-bottom: 1px solid black !important;
+		height: 30px !important;
+		padding: 1px !important;
+		text-align-last: center !important;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__arrow {
+		height: 30px !important;
+	}
+    label{
+		color: black !important;
+		font-weight: 400;
+		font-size:10pt;
+		margin-bottom: 0px;
+	}
+    .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+        z-index: 3;
+        color: #fff;
+        cursor: default;
+        background-color: #00a65a;
+        border-color: #00a65a;
+    }
+    .style-1::-webkit-scrollbar{
+        height:10px;
+        width:4px;
+        border-radius: 4px;
+        background: transparent;
+        transition: all 0.3s ease;
+        }
+    .style-1::-webkit-scrollbar:hover{
+        background: #c6c7ca;
+    }
+    .style-1::-webkit-scrollbar-thumb{
+        background: #777779;
+        border-radius: 4px;
+    }
+</style>
+<div class="wrapper" ng-controller="OMEducationalAttainmentController" ng-init="dashboard.active();">
+    <div class="main-header" ng-include="headerTemplate"></div> 
+    <div class="main-sidebar" ng-include="leftNavigationTemplate"></div> 
+    <div class="content-wrapper">
+        <spinner name="form01spinner" ng-cloak="">
+            <div class="overlay"></div>
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <div class="please-wait">Please Wait...</div>
+        </spinner>
+        <section class="content-header sec-head"
+            style="height: 150px;color: white;text-shadow: 12;box-shadow: 0 8px 6px -6px black;">
+            <div style="font-size: 9em;/*color: #00a65a !important;*/">
+                <i class="fa"
+                    style="background: url('assets/images/mv.png');background-repeat: no-repeat;background-size: 115px;color: transparent;width: 120px;float: left;color:transparent">&nbsp;&nbsp;&nbsp;</i>
+                <div style="font-size: 12pt;padding-top: 15px;text-indent:15px">
+                    {{compensationCompanyName.company_name}}</div>
+                <div style="font-size: 20pt;text-indent:15px">NXPERT EON</div>
+                <div style="font-size: 15pt; text-indent:15px"> Andon</div>
+            </div>
+            <ol class="breadcrumb" style="margin-left:125px;background: #f5f5f5 !important">
+                <li><a href=".#/admin/home"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href=".#/admin/hr/dashboard"> Andon</a></li>
+                <li class="active">Operation Monitoring</li>
+            </ol>
+            <div class="bgPulse hidden-xs">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+        <section class="content">
+            <div class="row" style="padding: 10px 50px 0 50px;">
+                <div class = "col-md-12 col-xs-12">
+                    <div id="compensation_companyName" style="font-size:18pt; text-align:center; font-weight: bold;">{{compensationCompanyName.company_name}}</div> 
+                    <div id="compensation_benefits_txt" style="font-size:15pt; text-align:center; font-weight: bold;">Educational Attainment Report</div>
+                    <div id="compensation_benefits_report" style="font-size:11pt; text-align:center;" ng-show="filter">Filtered per - {{filter | titlecase}}</span></div>
+                    <div id="compensation_date" style="font-size:11pt; text-align:center; padding-bottom:20px;">Report Generated on {{date}} {{time}}</div> 
+                </div>
+
+                <div class = "col-md-6 col-xs-12">
+                    <div class="search-input-wrapper">
+                        <div class="btn-toolbar">
+                            <label>Show
+                                <select class="" ng-model="dashboard.values.pageSize">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                                entries
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-xs-12" style = " padding: 0;">
+                    <!--Visible and hidden function-->
+                    <div style = "text-align:right; padding: 0;">
+                        <button id="btn-refreshh" class="btn btn-flat btn-success pull-right" ng-click="reloadData()" title="Refresh"><i class="fa fa-refresh fa-sm" style="padding:3px"></i>Refresh
+                        </button>
+                        <button class="btn btn-flat btn-success pull-right" data-toggle="modal" data-target="#myModal" title="Search"  style = "margin-right:3px;"> <i class="fa fa-search fa-sm"></i> Filter </button>
+                        <button id="btn-export" class="btn btn-flat btn-primary pull-right" ng-click="printEdu('print-edu')" title="Print/Save to PDF" style="margin-right:3px;background: #00a65a; border: 1px solid #00a65a;"><i class="fa fa fa-print fa-sm" style="padding:3px"></i>Print</button>
+                        <button id="btn-export" class="btn btn-flat btn-success pull-right" onclick="angular.element(this).scope().exportReportToExcel('sortableView')" title="Export to Excel" style = "margin-right:3px;"><i class="fa fa-file-excel-o fa-sm" style="padding:3px"></i>Export</button>
+                    </div>
+                    <!-- <div class = "visible-xs" style = "text-align:center; padding: 0;">
+                        <button id="btn-refreshh" class="btn btn-flat btn-success" ng-click="dtInstance.reloadData()" title="Refresh"><i class="fa fa-refresh fa-sm" style="padding:3px"></i>Refresh
+                        </button>
+                        <button class="btn btn-flat btn-success" data-toggle="modal" data-target="#myModal" title="Search"> <i class="fa fa-search fa-sm"></i> Filter </button>
+                        <button id="btn-export" class="btn btn-flat btn-success" onclick="angular.element(this).scope().exportReportToExcel('sortableView')" title="Export to Excel"><i class="fa fa-file-excel-o fa-sm" style="padding:3px"></i>Export</button>
+                    </div> -->
+                </div>
+
+                <div class = "col-md-12 col-xs-12">
+                    <div class="row style-1" style ="overflow: auto;">
+                        <table id="sortableView" class="sortable table-striped" ng-init="viewEducAttainReport();" style="min-width:1500px" >
+                            <thead>
+                                <tr>
+                                    <th class = "background" style="height:40px; width:80px; border: 1px solid white;" >
+                                        <div style = " font-size:11pt; text-align: center;padding:0px 5px 0px 5px">Emp ID</div>
+                                    </th>
+                                    <th class = "background" style="width:200px; border: 1px solid white;">
+                                        <div style = "font-size:11pt; text-align: center;padding:0px 5px 0px 5px">Name</div>
+                                    </th>
+                                    <th class = "background" style="width:300px; border: 1px solid white;">
+                                        <div style = "font-size:11pt; text-align: center;padding:0px 5px 0px 5px">Educational Attainment</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="style-1" style="height:400px;">
+                                <tr dir-paginate="view in educattainmentView | itemsPerPage: dashboard.values.pageSize" current-page="dashboard.values.examinationPage" ng-show="educattainmentView.length > 0">
+                                    <td style="height:40px; width:80px; word-wrap: break-word;vertical-align: top;">
+                                        <div style = " font-size:11pt; text-align: center;padding:0px 5px 0px 5px;">{{view.empid}}</div>
+                                    </td>
+                                    <td style="width:200px; word-wrap: break-word;vertical-align: top;">
+                                        <div style = "font-size:11pt; text-align: left;padding:0px 5px 0px 5px;">{{view.empname}}</div>
+                                    </td>
+                                    <td style="width:300px; word-wrap: break-word;vertical-align: top;">
+                                        <table ng-if="view.educ">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:40% !important;padding:5px">Attainment</th>
+                                                    <th style="width:40% !important;padding:5px">School</th>
+                                                    <th style="width:10% !important;padding:5px">From</th>
+                                                    <th style="width:10% !important;padding:5px">To</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="educ_view in view.educ track by $index">
+                                                    <td style="width:40% !important;padding:5px;vertical-align: top;">{{educ_view.attainment}}</td>
+                                                    <td style="width:40% !important;padding:5px;vertical-align: top;">{{educ_view.school}}</td>
+                                                    <td style="width:10% !important;padding:5px;vertical-align: top;">{{educ_view.from | date : "M/dd/y"}}</td>
+                                                    <td style="width:10% !important;padding:5px;vertical-align: top;">{{educ_view.to | date : "M/dd/y"}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--/.Row-->                    
+                </div>
+
+                 <!-- Pagination -->
+                 <div class="text-right">
+                    <dir-pagination-controls boundary-links="true" template-url="view/page/dirPagination.html"></dir-pagination-controls>
+                </div>
+                <!-- /.pagination -->
+
+                <div class="modal fade modal-info" id="myModal" role="dialog"
+                style="background: rgba(0, 0, 0, 0.8);">
+                <div class="modal-dialog">
+                    <div class="modal-header" style="background: #00a65a !important; border-color: #00a65a  !important;" >
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Filter</h4>
+                    </div>
+                    <div class="modal-body" style="background: white !important">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="employee">Employee</label>
+                                    <select select2 ng-model="emp" placeholder="Employee Name & ID" style="border:none;border-bottom: 1px black solid;width:100%;height: 30px;background: white;    padding-top: 0px;padding-bottom: 0px;">
+                                    <option ng-repeat="data in getAllEmployeeReport track by $index" value="{{data.empid}}">{{data.empid}}&nbsp;{{data.fullname}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="classif">Classification</label>
+                                    <select id="classif" class="form-control" ng-model="department"
+                                        ng-options="dept.id as dept.name for dept in dashboard.values.department | filter: typeLimit track by dept.id" select2 style="border:none !important;border-bottom: 1px black solid;width:100%;height: 30px;background: white;padding-top: 0px;padding-bottom: 0px;" >
+                                        <!--option value="">Select Classification</option-->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="attainment">Attainment</label>
+                                    <input id="attainment" class="form-control" ng-model="attainment" style="border:none;border-bottom:1px solid black !important" autocomplete="off">
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="sy">School Year</label>
+                                    <input id="sy" class="form-control" ng-model="sy" style="border:none;border-bottom:1px solid black !important" autocomplete="off">
+                                </div>
+                            </div> -->
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="school">School</label>
+                                    <input id="school" class="form-control" ng-model="school" style="border:none;border-bottom:1px solid black !important" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="background: #00a65a !important; border-color: #00a65a  !important;">
+                        <button ng-click="searchEducAttainment()" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-search"></i> Search</button>
+                        <button type="button" class="btn btn-danger pull-left" ng-click="resetsearch()">Reset</button>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- print age dist -->
+        <div id="print-edu" class="print-only" style="color:black">
+            <div>
+                <p>
+                    {{compensationCompanyName.company_name}}<br>
+                    Educational Attainment Report<br>
+                    <span ng-if="{{filter}} != '' && {{filter}} != null">Filtered per - {{filter}}<br></span>
+                    Report Generated on {{date}} {{time}}<br>
+                </p>
+            </div>
+            <!-- first -->
+            <div>
+                <div class = "col-md-12 col-xs-12" >
+                    <div class="row style-1" style ="overflow-y: auto;">
+                        <table style="border-collapse: collapse;border: 1px solid black;">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center;border: 1px solid black;">Employee ID
+                                    </th>
+                                    <th style="text-align: center;border: 1px solid black;">Name
+                                    </th>
+                                    <th style="text-align: center;border: 1px solid black;">Educational Attainment
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="view in educattainmentView">
+                                    <td style="text-align: center;border: 1px solid black;">{{view.empid}}
+                                    </td>
+                                    <td style="text-align: center;border: 1px solid black;">{{view.empname}}
+                                    </td>
+                                    <td style="text-align: center;border: 1px solid black;">
+                                        <table ng-if="view.educ">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:40% !important;padding:5px">Attainment</th>
+                                                    <th style="width:40% !important;padding:5px">School</th> 
+                                                    <th style="width:10% !important;padding:5px">From</th>
+                                                    <th style="width:10% !important;padding:5px">To</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="educ_view in view.educ track by $index">
+                                                    <td style="width:40% !important;padding:5px;vertical-align: top;">{{educ_view.attainment}}</td>
+                                                    <td style="width:40% !important;padding:5px;vertical-align: top;">{{educ_view.school}}</td>
+                                                    <td style="width:10% !important;padding:5px;vertical-align: top;">{{educ_view.from | date : "M/dd/y"}}</td>
+                                                    <td style="width:10% !important;padding:5px;vertical-align: top;">{{educ_view.to | date : "M/dd/y"}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- last -->
+        </div>
+        <!-- print age dist -->
+		
+    </div>
+    <!--/.Content Wrapper-->
+    <div ng-include="footerTemplate"></div>
+</div>
+<!--/.Wrapper-->

@@ -1,0 +1,1185 @@
+<style>
+    .main-footer {
+        background: #fff;
+        padding: 5px;
+        color: #444;
+        border-top: 1px solid #d2d6de;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        z-index: 999;
+    }
+
+    .content-wrapper {
+        background: white
+    } 
+
+    .example2 th {
+        color: white; 
+        background-color: #006ba6;
+        text-align: center
+    }
+
+    .btnTD {
+        text-align: center;
+    }
+
+    .info {
+        font-weight: bold;
+    }
+
+    .ui-widget-header {
+        border: 1px solid green;
+        background: #008d4c;
+        color: black;
+    }
+
+    .lightbox-modal {
+        z-index: 99999 !important;
+    }
+
+    .bder {
+        border: 0px solid black;
+    }
+
+    .table-striped>tbody>tr:nth-child(odd)>td,
+    .table-striped>tbody>tr:nth-child(odd)>th {
+        background-color: #d9e5f3;
+    }
+
+    table.dataTable>tbody>tr.child ul li {
+        border-bottom: 0px solid #efefef !important;
+    }
+
+    .req-field {
+        color: red;
+    }
+
+    .paddingZero {
+        padding: 0px !important;
+    }
+
+    .txtresize {
+        resize: vertical;
+        min-height: 110px !important;
+    }
+
+    .sec-head {
+        overflow: hidden;
+        animation: bgColor 8s normal forwards;
+    }
+
+    .bgPulse {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bgPulse span {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+
+    }
+
+    .bgPulse span:nth-child(2n+1) {
+        background: transparent;
+        border: 5px solid #fff;
+    }
+
+    .bgPulse span:nth-child(1) {
+        border-radius: 12px;
+        top: 30%;
+        left: 30%;
+        animation: animate 10s linear infinite;
+    }
+
+    .bgPulse span:nth-child(2) {
+        top: 20%;
+        left: 50%;
+        animation: animate 15s linear infinite;
+    }
+
+    .bgPulse span:nth-child(3) {
+        top: 40%;
+        left: 70%;
+        animation: animate 20s linear infinite;
+    }
+
+    .bgPulse span:nth-child(4) {
+        border-radius: 12px;
+        top: 60%;
+        left: 80%;
+        animation: animate 12s linear infinite;
+    }
+
+    .bgPulse span:nth-child(5) {
+        top: 60%;
+        left: 40%;
+        animation: animate 17s linear infinite;
+    }
+
+    .bgPulse span:nth-child(6) {
+        border-radius: 12px;
+        top: 60%;
+        left: 60%;
+        animation: animate 22s linear infinite;
+    }
+
+    .bgPulse span:nth-child(7) {
+        top: 60%;
+        left: 20%;
+        animation: animate 17s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: scale(0) translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.4;
+        }
+
+        100% {
+            transform: scale(1) translateY(-100px) rotate(360deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes bgColor {
+        0% {
+            background: #4ab8ff;
+        }
+
+        25% {
+            background: #30aeff;
+        }
+
+        50% {
+            background: #17a4ff;
+        }
+
+        100% {
+            background: #0099fc;
+        }
+    }
+
+    .fc-day-grid-container {
+        overflow: hidden auto !important;
+        height: 340px !important;
+    }
+
+    .fc-widget-header {
+        margin-right: 0px;
+    }
+
+    .fc-more-cell {
+        text-align: center;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    .fc-view-container {
+        border: 1px solid #ddd;
+    }
+
+    .fc-day-grid-event {
+        background: none;
+        border: 0px;
+        color: black !important;
+        cursor: pointer !important
+    }
+
+    .fc-today-button {
+        visibility: hidden
+    }
+
+    .fc-unthemed td.fc-today {
+        background: #cef98a;
+    }
+
+    .my-legend .legend-title {
+        text-align: left;
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-size: 90%;
+    }
+
+    .my-legend .legend-scale ul {
+        margin: 0;
+        padding: 0;
+        float: left;
+        list-style: none;
+    }
+
+    .my-legend .legend-scale ul li {
+        display: block;
+        float: left;
+        width: 50px;
+        margin-bottom: 6px;
+        text-align: center;
+        font-size: 80%;
+        list-style: none;
+    }
+
+    .my-legend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 25px;
+        width: 50px;
+        padding: 5px;
+    }
+
+    .my-legend .legend-source {
+        font-size: 70%;
+        color: #999;
+        clear: both;
+    }
+
+    .my-legend a {
+        color: #777;
+    }
+
+    @media screen and (max-width: 1440px) {
+        .fsto {
+            font-size: 20px !important;
+        }
+
+        .fsi {
+            font-size: 18px !important;
+        }
+
+        .sec-head {
+            height: 112px !important;
+            padding-top: 0px !important;
+        }
+
+        h2 {
+            font-size: 18px !important;
+        }
+
+        .sec-head {
+            height: 112px !important;
+            padding-top: 0px !important;
+        }
+
+        .fc-button-group {
+            font-size: 9px;
+        }
+
+        .fc-toolbar .fc-header-toolbar {
+            margin-bottom: 0px;
+        }
+
+        h3 {
+            font-size: 20px !important;
+        }
+
+        .fsi {
+            font-size: 15px !important;
+        }
+
+        .ic {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 22px !important;
+        }
+
+        .p100lr {
+            padding-left: 50px !important;
+            padding-right: 50px !important;
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        h2 {
+            font-size: 18px !important;
+        }
+
+        .sec-head {
+            height: 112px !important;
+            padding-top: 0px !important;
+        }
+
+        .fc-button-group {
+            font-size: 9px;
+        }
+
+        .fc-toolbar .fc-header-toolbar {
+            margin-bottom: 0px;
+        }
+
+        h3 {
+            font-size: 20px !important;
+        }
+
+        .fsi {
+            font-size: 15px !important;
+        }
+
+        .ic {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 22px !important;
+        }
+
+        .p100lr {
+            padding-left: 50px !important;
+            padding-right: 50px !important;
+        }
+
+        .pad {
+            padding-top: 10px;
+            padding-right: 20px !important;
+            padding-left: 20px !important;
+        }
+
+    }
+
+    @media screen and (max-width: 1176px) {
+        .btn {
+            font-size: 13px !important;
+        }
+
+    }
+
+    .fsto {
+        font-size: 24px;
+    }
+
+    .fs {
+        font-size: 20px;
+    }
+
+    .event-full {
+        color: #fff;
+        vertical-align: middle !important;
+        text-align: center;
+        opacity: 1;
+    }
+
+    .nomargin {
+        margin: 0px !important;
+    }
+
+    .p5 {
+        padding: 2px;
+    }
+
+    .ic {
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+    }
+
+    .form-group {
+        margin: 0px;
+    }
+
+    .p100lr {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .wfooter {
+        position: absolute;
+        top: 3%;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .wpn {
+        border: 2px solid #0070c0 !important;
+        border-top: 40px solid #0070c0 !important;
+        overflow: auto;
+    }
+
+    .wpnb {
+        border: 2px solid #44a3c0 !important;
+        border-top: 40px solid #44a3c0 !important;
+        overflow: auto;
+    }
+
+    .wpnapp {
+        border: 2px solid #44b874 !important;
+        border-top: 40px solid #44b874 !important;
+        overflow: auto;
+    }
+
+    .wpn201 {
+        border: 2px solid#43bda7 !important;
+        border-top: 40px solid#43bda7 !important;
+        overflow: auto;
+    }
+
+    .wpnnoti {
+        border: 2px solid #46b246 !important;
+        border-top: 40px solid #46b246 !important;
+        overflow: auto;
+    }
+
+    .wpnannounce {
+        border: 2px solid #70ad47 !important;
+        border-top: 40px solid #70ad47 !important;
+        overflow: auto;
+    }
+
+    .well {
+        margin: 0px;
+    }
+
+    .mb0 {
+        margin-bottom: 0px !important;
+    }
+
+    .bh {
+        height: 358px;
+    }
+
+    .empbox {
+        font-size: 64pt;
+        font-weight: normal;
+        margin-bottom: 5px;
+        text-align: center;
+        width: auto;
+        height: 130px;
+        margin-right: auto;
+        margin-left: auto;
+        background: #f57000;
+        vertical-align: middle;
+
+        border-radius: 15px;
+        color: white;
+    }
+
+    .pad {
+        padding-top: 10px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .style-15b::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 0px;
+    }
+
+    .style-15b::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+    }
+
+    .style-15b::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: #FFF;
+        background-image: -webkit-gradient(linear,
+                40% 0%,
+                75% 84%,
+                from(#5cb8d4),
+                to(#44a3c0),
+                color-stop(.6, #5cb8d4))
+    }
+
+    .style-15app::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 0px;
+    }
+
+    .style-15app::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+    }
+
+    .style-15app::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: #FFF;
+        background-image: -webkit-gradient(linear,
+                40% 0%,
+                75% 84%,
+                from(#44b874),
+                to(#44b874),
+                color-stop(.6, #44b874))
+    }
+
+    .style-15201::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 0px;
+    }
+
+    .style-15201::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+    }
+
+    .style-15201::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: #FFF;
+        background-image: -webkit-gradient(linear,
+                40% 0%,
+                75% 84%,
+                from(#43bda7),
+                to(#43bda7),
+                color-stop(.6, #43bda7))
+    }
+
+    .style-15noti::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 0px;
+    }
+
+    .style-15noti::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+    }
+
+    .style-15noti::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: #FFF;
+        background-image: -webkit-gradient(linear,
+                40% 0%,
+                75% 84%,
+                from(#46b246),
+                to(#46b246),
+                color-stop(.6, #46b246))
+    }
+
+    .style-15announce::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 0px;
+    }
+
+    .style-15announce::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+    }
+
+    .style-15announce::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: #FFF;
+        background-image: -webkit-gradient(linear,
+                40% 0%,
+                75% 84%,
+                from(#70ad47),
+                to(#70ad47),
+                color-stop(.6, #70ad47))
+    }
+
+    .fa-birthday-cake {
+        font-size: 26px;
+    }
+
+    .fa-file-pdf-o {
+        font-size: 25px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .pt5 {
+        padding-top: 8px;
+    }
+	
+	input[disabled] {
+		cursor: default;
+		background: white;
+	}
+    .content{
+        min-height: 250px;
+        padding: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    
+	
+	.graphs1{
+        display: block;
+        width: 570px;
+        height: 180px !important;
+    }
+    .graphs2{
+        display: block;
+        width: 570px;
+        height: 215px !important;
+    }
+    .graphs3{
+        display: block;
+        width: 570px;
+        height: 240px !important;
+    }
+    .tm {
+        margin-left: 5px;
+        margin-right: 5px;
+
+    }
+    .piewid{
+        height: 160px;
+        display: block;
+        width: 420px;
+        margin-left: 30px;
+
+    }
+    .p15 {
+		padding-top: 15px;
+    }
+	.boxl {
+        height: 20px;
+        width: 20px;
+        padding: 0px 10px 0px 10px;
+        margin-right: 4px;
+    }
+    .plabels {
+        display: inline;
+        margin: 0 10px;
+    }
+    .legend-labels{
+        padding-top:15px;
+    }
+    .fOThit{
+        height: 650px;
+    }
+	.pieleave{
+        display: block;
+        width: 570px;
+        height: 200px !important;
+    }
+    .wpnnotiOT {
+        overflow: auto;
+    }
+    .bhOT {
+        height: 498px;
+    }
+    .bhLV {
+        height: 200px;
+    }
+    .style-15notiOT::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 0px;
+    }
+    .style-15notiOT::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 0px;
+    }
+    .style-15notiOT::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+    }
+    .style-15notiOT::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: #FFF;
+        background-image: -webkit-gradient(linear,
+                40% 0%,
+                75% 84%, 
+                from(#46b246),
+                to(#46b246),
+                color-stop(.6, #46b246))
+    }
+	.pad100{
+        padding-top:100px; 
+    }
+</style>
+<div class="wrapper" ng-controller="OMHomeController" ng-init="dashboard.active();">   
+
+    <div class="main-header" ng-include="headerTemplate"></div>
+    <div class="main-sidebar" ng-include="leftNavigationTemplate"></div>
+
+    <div class="content-wrapper">
+        <spinner name="form01spinner" ng-cloak=""> 
+            <div class="overlay"></div>
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <div class="please-wait">Please Wait...</div>
+        </spinner>
+        <section class="content-header sec-head"
+            style="height: 150px;color: white;text-shadow: 12;box-shadow: 0 8px 6px -6px black;">
+            <div style="font-size: 9em;/*color: #00a65a !important;*/">
+                <i class="fa"
+                    style="background: url('assets/images/plan.png');background-repeat: no-repeat;background-size: 115px;color: transparent;width: 120px;float: left;color:transparent">&nbsp;&nbsp;&nbsp;</i>
+                <div style="font-size: 12pt;padding-top: 15px;text-indent:15px">
+                    {{compensationCompanyName.company_name}}</div>
+                <div style="font-size: 20pt;text-indent:15px">NXPERT EON</div>
+                <div style="font-size: 15pt; text-indent:15px"> Equipment Chart</div>
+            </div>
+            <ol class="breadcrumb" style="margin-left:125px;background: #f5f5f5 !important">
+                <li><a href=".#/admin/home"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href=".#/admin/hr/dashboard"> Equipment Chart</a></li>
+                <li class="active">Reports</li>
+            </ol>
+            <div class="bgPulse hidden-xs">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <section id="content" class="content"
+            style="padding-bottom: 50px !important;overflow-y:hidden;padding-top: 0px;">
+            <div class="col-md-12  p5" style="margin-top: 5px;">
+                <div class="col-md-5 p5">
+                    <div class="well well-lg text-black text-center wpn style-15 text-center bh" ng-init="totalemp()">
+                        <div class="col-md-5">
+                            <h3 class="nomargin">{{today | date:'MMM dd, yyyy'}}</h3>
+                            <p>{{ today | date:'EEEE'}}</p>
+                            <a href="#/admin/hr/comprehensive/attendancetoday">
+                                <p class="empbox" style=" cursor: pointer;">
+                                    <img src="assets/images/totalemployees.webp"
+                                        style="height: 40px; border-radius: 50%; cursor: pointer;" class="user-image">
+                                    {{totalemployees.total}}</p>
+                            </a>
+                            <p>Total Present</p>
+                        </div>
+                        <div class="col-md-7">
+                            <button class="btn btn-lg btn-block" ng-click="viewcontent('headcount')"
+                                style="background: #0070c0; color: white; margin-bottom: 10px;">
+                                <img src="assets/images/headcount.webp" style="height: 24px;"
+                                    class="user-image pull-left">
+                                Headcount
+                            </button>
+                            <button class="btn btn-lg btn-block btn-success" ng-click="viewcontent('ovetime')"
+                                style="color: white;  margin-bottom: 10px;">
+                                <img src="assets/images/overtime.webp" style="height: 24px;"
+                                    class="user-image pull-left">
+                                Applied Overtime
+                            </button>
+                            <button class="btn btn-lg btn-block btn-primary" ng-click="viewcontent('leaves')"
+                                style="color: white;  margin-bottom: 10px;">
+                                <img src="assets/images/leaves.webp" style="height: 24px;" class="user-image pull-left">
+                                On-Leave & OB Trips
+                            </button>
+                            <button class="btn btn-lg btn-block btn-danger" ng-click="viewcontent('lates')"
+                                style="color: white;  margin-bottom: 10px;">
+                                <img src="assets/images/lates.webp" style="height: 24px;" class="user-image pull-left">
+                                Tardiness
+                            </button>
+                        </div>
+                        <div class="wfooter">
+                            Attendance Today
+
+                        </div>
+                        <img src="assets/images/hrdashboard.webp" style="height: 24px; right: 13px;"
+                            class="user-image wfooter pull-right">
+
+                    </div>
+                </div>
+                
+				
+				<div class="col-md-4 p5">
+                    <div class="well well-lg text-black text-center wpnnoti style-15noti text-center bh pt5"
+                        ng-init="notifications()">
+                        <table class="table fw6 text-left">
+                            <tbody>
+                                <tr ng-repeat="n in noti">
+                                    <td><img src="assets/php/admin/hr/employee/pix/{{n.id}}.webp?1591229368"
+                                            style="height: 40px; border-radius: 50%;" class="user-image">
+                                    </td>
+                                    <td>
+                                        <h4 class="nomargin">{{ n.name }}</h4>
+                                            <p class="nomargin" ng-bind-html="n.empactiontaken"></p>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="wfooter">Notifications</div>
+                        <img src="assets/images/hrdashboard.webp" style="height: 24px; right: 13px;"
+                            class="user-image wfooter pull-right">
+                    </div>
+                </div>
+				
+				
+                <div class="col-md-3 p5">
+                    <div class="well well-lg text-black text-center wpnapp style-15app text-center bh pt5"
+                        ng-init="applicants()">
+                        <table class="table fw6 text-left">
+                            <tbody>
+                                <tr ng-repeat="a in appli">
+                                    <td><img src="assets/php/admin/hr/employee/pix/{{a.id}}.webp?1591229368"
+                                            style="height: 40px; border-radius: 50%;" class="user-image">
+                                    </td>
+                                    <td>
+                                        <h4 class="nomargin">{{ a.name }}</h4>
+                                        <p class="nomargin">{{ a.post }}</p>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="wfooter">Applicants</div>
+                        <img src="assets/images/hrdashboard.webp" style="height: 24px; right: 13px;"
+                            class="user-image wfooter pull-right">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 p5">
+                <div class="col-md-5 p5">
+                    <div class="well well-lg text-black text-center wpnannounce style-15announce text-center bh pt5"
+                        ng-init="announcement()">
+                        <table class="table fw6 text-left">
+                            <tbody>
+                                <tr ng-repeat="al in announcelist">
+                                    <td>
+                                        <h4 class="nomargin">{{ al.title }}</h4>
+                                        <p class="nomargin"><marquee>{{ al.description }}</marquee></p>
+                                    </td>
+                                    <td style="width: 200px;" class="text-right">
+                                        <!-- <h5 class="nomargin">{{al.start | date:'MMM dd, yyyy'}}</h5> -->
+                                        <h5 ng-if="al.start !== al.end" class="nomargin">{{al.start | date:'MMMM dd, yyyy'}} - {{al.end | date:'MMMM dd, yyyy'}}</h5>
+                                        <h5 ng-if="al.start === al.end" class="nomargin">{{al.start | date:'MMM dd, yyyy'}}</h5>
+                                        <p style="margin-bottom: 0px; margin-top: 5px;">
+                                            <i ng-click="viewfile( al.filename );" style="cursor: pointer;"
+                                                class="fa fa-file-pdf-o" ng-if="al.filesize != '0 bytes'"
+                                                aria-hidden="true"></i></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="wfooter">Announcements</div>
+                        <img src="assets/images/hrdashboard.webp" style="height: 24px; right: 13px;"
+                            class="user-image wfooter pull-right">
+                    </div>
+                </div>
+				<div class="col-md-4 p5">
+                    <div class="well well-lg text-black text-center wpn201 style-15201 text-center bh pt5" ng-init = "changeRequest()">
+                        <table class="table fw6 text-left">
+                            <tbody>
+                                <tr ng-repeat = "view in changeRequestList">
+                                    <td><img src="assets/php/admin/hr/employee/pix/{{view.id}}.webp?1591229368"
+                                            style="height: 40px; border-radius: 50%;" class="user-image">
+                                    </td>
+                                    <td>
+                                        <h4 class="nomargin">{{view.name}}</h4>
+                                        <p class="nomargin">{{view.req}}</p>
+                                    </td>
+                                    <td class=" btnTD" style = "vertical-align:bottom;">
+                                        <button class="btn btn-flat btn-xs btn-success" ng-click="viewCr(view.idreq);" data-target="#myModal" data-toggle="modal" style = "background: #43bda7;"><i class="fa fa-pencil-square-o fa-xs" ></i> View</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="wfooter">201 Records Change Requests</div>
+                        <img src="assets/images/hrdashboard.webp" style="height: 24px; right: 13px;"
+                            class="user-image wfooter pull-right">
+                    </div>
+                </div>
+                <div class="col-md-3 p5">
+                    <div class="well well-lg text-black text-center wpnb style-15b text-center bh pt5">
+                        <table class="table fw6 text-left">
+                            <tbody>
+                                <tr ng-repeat="b in birthdays">
+                                    <td><img src="assets/php/admin/hr/employee/pix/{{b.id}}.webp?1591229368"
+                                            style="height: 40px; border-radius: 50%;" class="user-image">
+                                    </td>
+                                    <td>
+                                        <h4 class="nomargin">{{ b.title }}</h4>
+                                        <p class="nomargin">{{ b.bunit }}</p>
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <i ng-if="b.description == 'Birthday'" style="color: #d73925;"
+                                            class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div class="wfooter">Birthday & Anniversary</div>
+                        <img src="assets/images/hrdashboard.webp" style="height: 24px; right: 13px;"
+                            class="user-image wfooter pull-right">
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Change Request Modal -->
+            <div class="modal fade modal-info" id="myModal" role="dialog" style="background: rgba(0, 0, 0, 0.8);">
+                <!-- Modal dialog-->
+                <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="background: #00a65a !important; border-color: #00a65a  !important;" >
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">201 Records Change Request</h4>
+                        </div>
+                        <div class="modal-body" style="background: white !important"> 
+                            <div class="row paddingZero" style = "color:black">
+                                <div class="col-md-12 col-xs-12" style="padding: 0 0 0 0">
+                                    <div class="col-xs-2" style="text-align: center;padding: 0 0 0 0;">
+                                        <h4 style="margin-bottom: 0px;padding: 5px">&nbsp;</h4>
+                                    </div>
+                                    <div class="col-xs-5" style="text-align: center;padding: 0 0 0 0;">
+                                        <h4 style="margin-bottom: 0px;padding: 5px">Current</h4>
+                                    </div>
+                                    <div class="col-xs-5" style="text-align: center;padding: 0 0 0 0;">
+                                        <h4 style="margin-bottom: 0px;padding: 5px">New</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label style="font-size: 12px;    padding-top: 5px;">Firstname</label>
+                                        <!-- <label class="visible-xs" style="font-size: 12px;    padding-top: 5px;">Firstname</label> -->
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; font-size:12pt; padding-left: 0px;">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_fname">
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_fname">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label style="font-size: 12px; padding-top: 5px;">Middlename</label>
+                                        <!-- <label class="visible-xs" style="font-size: 12px;    padding-top: 5px;">Firstname</label> -->
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; font-size:12pt; padding-left: 0px;">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_mname">
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_mname">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label style="font-size: 12px;    padding-top: 5px;">Lastname</label>
+                                        <!-- <label class="visible-xs" style="font-size: 12px;    padding-top: 5px;">Firstname</label> -->
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; font-size:12pt; padding-left: 0px;">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_lname">
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_lname">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label style="font-size: 12px; padding-top: 5px;">Suffix</label>
+                                        <!-- <label class="visible-xs" style="font-size: 12px;    padding-top: 5px;">Firstname</label> -->
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; font-size:12pt; padding-left: 0px;">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_suffix">
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        <select class="readonly" ng-model="viewChangeReq.new_suffix" disabled style="text-align-last: left;border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%">
+											<option value="" class="" selected="selected">Select Suffix</option>
+											<option ng-repeat="data in viewChangeReq.suffex track by $index" value="{{data.suffix}}">{{data.suffix}}</option>
+										</select>
+									</div>
+                                </div>
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label style="font-size: 12px;    padding-top: 5px;">Nickname</label>
+                                        <!-- <label class="visible-xs" style="font-size: 12px;    padding-top: 5px;">Firstname</label> -->
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; font-size:12pt; padding-left: 0px;">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_nickname">
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_nickname">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label style="font-size: 12px;    padding-top: 5px;">Marital Status</label>
+                                        <!-- <label class="visible-xs" style="font-size: 12px;    padding-top: 5px;">Firstname</label> -->
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; font-size:12pt; padding-left: 0px;">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_mari_stat">
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        
+										<select id="civilstat" name="civilstat" class="readonly" ng-model="viewChangeReq.new_mari_stat" disabled style="text-align-last: left;border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-options="addstat.id as addstat.stat for addstat in viewChangeReq.mari_stat">
+                                        </select>
+									</div>
+                                </div>
+
+                                <div class="col-md-12 col-xs-12" style ="margin-top:15px">
+                                    <div class="col-xs-2">
+                                        <label style="font-size: 12px;">Dependent</label>
+                                    </div>
+                                    <div class="col-xs-5" style="padding:0; border:none; width:40%" class="readonly" disabled type="text">
+                                        <table ng-if="viewChangeReq.getdepts!=''">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:50% !important; font-size:9pt;">Name</th>
+                                                    <th style="font-size:9pt;">Birthdate</th>
+                                                    <th style="font-size:9pt;">Age</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat="a in viewChangeReq.getdepts track by $index">
+                                                    <td style="width:50% !important; font-size:9pt;">
+                                                        <div style="text-align: left; border:none;border-bottom: 1px black solid;"> {{a.name}} </div>
+                                                    </td>
+                                                    <td style="width:50% !important; font-size:9pt;">
+                                                        <div style="text-align: left; border:none;border-bottom: 1px black solid;"> {{a.bdate}} </div>
+                                                    </td>
+                                                    <td style="width:50% !important; font-size:9pt;">
+                                                        <div style="text-align: left;border:none;border-bottom: 1px black solid;"> {{a.age}} </div>
+                                                    </td>
+                                                </tr>
+                                        
+                                            </tbody>
+                                        </table>
+                                        <div ng-if="!viewChangeReq.getdepts">&nbsp;</div>
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; padding-left:28px;">
+                                        <div class="col-xs-5" style="padding:0; width:104%" class="readonly" disabled type="text">
+                                            <table ng-if="viewChangeReq.getdepts_new!=''">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width:50% !important; font-size:9pt;">Name</th>
+                                                        <th style="font-size:9pt;">Birthdate</th>
+                                                        <th style="font-size:9pt;">Age</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="b in viewChangeReq.getdepts_new track by $index">
+                                                        <td style="width:50% !important; font-size:9pt;">
+                                                            <div style="text-align: left; border:none; border-bottom: 1px black solid;"> {{b.name}} </div>
+                                                        </td>
+                                                        <td style="width:50% !important; font-size:9pt;">
+                                                            <div style="text-align: left; border:none;border-bottom: 1px black solid;"> {{b.bdate}} </div>
+                                                        </td>
+                                                        <td style="width:50% !important; font-size:9pt;">
+                                                            <div style="text-align: left; border:none;border-bottom: 1px black solid;"> {{b.age}} </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label class="hidden-xs" style="font-size: 12px; padding-top: 5px;">Emergency Contact</label>
+                                        <label class="visible-xs" style="font-size: 12px; padding-top: 5px;">Emergency Contact</label>
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; padding-left: 0px;">
+                                        <table>
+                                            <tr>
+                                                <td style = "width:80% !important;">
+                                                    <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:95%" ng-model="viewChangeReq.current_emer_name">
+                                                </td>
+                                                <td>
+                                                    <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_emer_cont">
+                                                 </td>
+                                            </tr>
+                                        </table>
+                                        <!-- <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_emer_name">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_emer_cont"> -->
+                                    </div>
+
+
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        <table>
+                                            <tr>
+                                                <td style = "width:75% !important; padding:0;">
+                                                    <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:95%" ng-model="viewChangeReq.new_emer_name"> 
+                                                </td>
+                                                <td style = "padding:0;">
+                                                    <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_emer_cont">
+                                                 </td>
+                                            </tr>
+                                        </table>
+                                        <!-- <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_emer_name">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_emer_cont"> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label style="font-size: 12px; padding-top: 5px;">Home Address</label>
+                                        <!-- <label class="visible-xs" style="font-size: 12px;    padding-top: 5px;">Firstname</label> -->
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; font-size:12pt; padding-left: 0px;">
+                                       <!-- <div class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%">{{viewChangeReq.current_addr}}</div>  -->
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_addr">
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        <!-- <div class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%">{{viewChangeReq.new_addr}}</div> -->
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_addr">
+                                    </div>
+                                </div>
+
+                            
+
+
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label style="font-size: 12px;    padding-top: 5px;">Phone Number</label>
+                                        <!-- <label class="visible-xs" style="font-size: 12px;    padding-top: 5px;">Firstname</label> -->
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; font-size:12pt; padding-left: 0px;">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_pnum">
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_pnum">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label style="font-size: 12px;    padding-top: 5px;">Fax Number</label>
+                                        <!-- <label class="visible-xs" style="font-size: 12px;    padding-top: 5px;">Firstname</label> -->
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; font-size:12pt; padding-left: 0px;">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_fax_num">
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_fax_num">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12" style="margin-top:15px" >
+                                    <div class="col-xs-2" style="font-size:12pt;">
+                                        <label style="font-size: 12px;    padding-top: 5px;">Mobile Number</label>
+                                        <!-- <label class="visible-xs" style="font-size: 12px;    padding-top: 5px;">Firstname</label> -->
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; font-size:12pt; padding-left: 0px;">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.current_mnum">
+                                    </div>
+                                    <div class="col-xs-5" style="font-size:12pt; ">
+                                        <input class="readonly" disabled type="text" style="border:none;border-bottom: 1px black solid;text-align: left;font-size:12px;width:100%" ng-model="viewChangeReq.new_mnum">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="modal-footer" style="background: #00a65a !important; border-color: #00a65a  !important;">
+                            <button style="width:100px" ng-click="aprroved(viewChangeReq.id)" class="btn btn-primary" data-dismiss="">Approve</button>
+                            <button style="width:100px" ng-click="disaprroved()" class="btn btn-danger" data-dismiss="modal">Disapprove</button>
+                            <!-- <button style="width:100px" type="button" class="btn btn-danger pull-left" ng-click="resetsearch()">Reset</button> -->
+                        </div>
+                    </div>
+                    <!-- /.Modal content-->
+                </div>
+                <!-- /.Modal dialog-->
+            </div>
+            <!-- /.Modal-->
+
+
+
+        </section>
+    </div>
+
+
+    <div ng-include="footerTemplate"></div>
+
+</div>

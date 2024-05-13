@@ -1,0 +1,149 @@
+<!-- <div class="row" style="height: auto;"> -->
+    <!-- <div class="col-md-12 col-xs-12" style="border-bottom: 5px solid rgb(68, 68, 68); "> -->
+        <!-- <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 10px;"> -->
+            <!-- Total Leave -->
+        <!-- </h3> -->
+        <!-- <button class="btn btn-primary pull-right" onclick="window.location.reload();"><i class="fa fa-arrow-left" -->
+                <!-- aria-hidden="true"> </i> Back to Dashboard</button> -->
+    <!-- </div> -->
+    <!-- <div class="col-md-7 col-xs-12" style="padding: 7px;"> -->
+        <!-- <div style="background-color: white; height: 650px; margin-top: 10px; padding: 30px; border: 1px solid black;" ng-init="getTotalMTD()"> -->
+            <!-- <div class="col-md-12"> -->
+                <!-- <h3 class="text-black text-left nomargin" ng-if="totalMTD[0].tot_absent >= '2'">Total Absences MTD - {{totalMTD[0].tot_absent}} Days</h3> -->
+                <!-- <h3 class="text-black text-left nomargin" ng-if="totalMTD[0].tot_absent == '1'">Total Absences MTD - {{totalMTD[0].tot_absent}} Day</h3> -->
+                <!-- <h3 class="text-black text-left nomargin" ng-if="totalMTD[0].tot_absent == '0' || totalMTD[0].tot_absent == null">Total Absences MTD - 0 Day</h3> -->
+                <!-- <h3 class="text-black text-left" ng-if="totalMTD[0].tot_late >='2'">Total Lates MTD - {{totalMTD[0].tot_late}} Hours</h3> -->
+                <!-- <h3 class="text-black text-left" ng-if="totalMTD[0].tot_late == '1'">Total Lates MTD - {{totalMTD[0].tot_late}} Hour</h3> -->
+                <!-- <h3 class="text-black text-left" ng-if="totalMTD[0].tot_late == null || totalMTD[0].tot_late == '0'">Total Lates MTD - 0 Hour</h3> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-12 pad100"> -->
+                <!-- <h3 class="text-black text-center">Lates & Absences by Month</h3> -->
+                <!-- <div style="width:99%"> -->
+                    <!-- <canvas id="bar7" class="chart-bar" width="1660" height="300" style="width:1660px !important;height:300px !important;margin-left: auto !important;margin-right: auto !important;"></canvas> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="col-md-5 col-xs-12" style="padding: 7px; margin-bottom: 10px;"> -->
+        <!-- <div style="background-color: white; height: 650px; margin-top: 10px; border: 1px solid black;"> -->
+            <!-- <div class="col-md-12" ng-init="getAbsencesbyDept()"> -->
+                <!-- <h3 class="text-black text-center">Absences by Department</h3> -->
+
+                <!-- <canvas id="pie" class="chart chart-pie chart-xs pieleave" chart-data="pie_data1" -->
+                <!-- chart-labels="pie_labels1" chart-colors="pie_colour1" -->
+                <!-- chart-options="pie_options1" legend="true" -->
+                <!-- style="height: 160px;" width="420" ></canvas> -->
+            
+                <!-- <span class="legend-scale text-center p15"></span> -->
+            <!-- </div> -->
+            
+            <!-- <div class="col-md-12" ng-init="getLatesbyDept()"> -->
+                <!-- <h3 class="text-black text-center">Lates by Department</h3> -->
+               
+                <!-- <canvas id="pie" class="chart chart-pie chart-xs pieleave" chart-data="pie_data1" -->
+                <!-- chart-labels="pie_labels1" chart-colors="pie_colour1" -->
+                <!-- chart-options="pie_options1" legend="true" -->
+                <!-- style="height: 160px;" width="420" ></canvas> -->
+            
+                <!-- <span class="legend-scale text-center p15"></span> -->
+
+            <!-- </div> -->
+            
+        <!-- </div> -->
+    <!-- </div> -->
+
+<!-- </div> -->
+<style>
+    .pieleave {
+    height: 260px !important;
+}
+</style>
+<div class="row" style="height: auto;">
+    <div class="col-md-12 col-xs-12" style="border-bottom: 5px solid rgb(68, 68, 68); ">
+        <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 10px;">
+            Total Tardiness
+        </h3>
+        <button class="btn btn-primary pull-right" onclick="window.location.reload();"><i class="fa fa-arrow-left"
+                aria-hidden="true"> </i> Back to Dashboard</button> 
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-12 col-xs-12" style="padding: 7px;" ng-show="totalMTD.length != 0 && totalMTD.length != null">
+            <div style="background-color: white; height: 650px; margin-top: 10px; padding: 30px; border:4px solid #ec711e; border-radius: 25px;" ng-init="getTotalMTD()">
+                <div class="col-md-12">
+                    <h3 class="text-black text-left " ng-if="totalMTD[0].tot_absent >= 2">Total Absences MTD - {{totalMTD[0].tot_absent}} Days</h3>
+                    <h3 class="text-black text-left " ng-if="totalMTD[0].tot_absent == 1">Total Absences MTD - {{totalMTD[0].tot_absent}} Day</h3>
+                    <h3 class="text-black text-left " ng-if="totalMTD[0].tot_absent == 0 || totalMTD[0].tot_absent == null">Total Absences MTD - 0 Day</h3>
+                    <h3 class="text-black text-left" ng-if="totalMTD[0].tot_late >='2'">Total Lates MTD - {{totalMTD[0].tot_late}} Hours</h3>
+                    <h3 class="text-black text-left" ng-if="totalMTD[0].tot_late == '1'">Total Lates MTD - {{totalMTD[0].tot_late}} Hour</h3>
+                    <h3 class="text-black text-left" ng-if="totalMTD[0].tot_late == null || totalMTD[0].tot_late == '0'">Total Lates MTD - 0 Hour</h3>
+                </div>
+                <div class="col-md-12 pad100">
+                    <h3 class="text-black text-center">Lates & Absences by Month</h3>
+                    <div style="width:99%">
+                        <canvas id="bar7" class="chart-bar" width="1660" height="300" style="width:1660px !important;height:300px !important;margin-left: auto !important;margin-right: auto !important;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-md-5 col-xs-12" style="padding: 7px; margin-bottom: 10px;">
+            <div style="background-color: white; height: 650px; margin-top: 10px; border:4px solid #00A65A; border-radius: 25px;">
+                <div class="col-md-12" ng-init="getAbsencesbyDept()">
+                    <h3 class="text-black text-center">Absences by Department</h3>
+
+                    <canvas id="pie" class="chart chart-pie chart-xs pieleave" chart-data="pie_data1"
+                    chart-labels="pie_labels1" chart-colors="pie_colour1"
+                    chart-options="pie_options1" legend="true"
+                    style="height: 160px;" width="420" ></canvas>
+                
+                    <span class="legend-scale text-center p15"></span>
+                </div>
+                
+                <div class="col-md-12" ng-init="getLatesbyDept()">
+                    <h3 class="text-black text-center">Lates by Department</h3>
+                    <canvas id="pie" class="chart chart-pie chart-xs pieleave" chart-data="pie_data1"
+                    chart-labels="pie_labels1" chart-colors="pie_colour1"
+                    chart-options="pie_options1" legend="true"
+                    style="height: 160px;" width="420" ></canvas>
+                
+                    <span class="legend-scale text-center p15"></span>
+
+                </div>
+                
+            </div>
+        </div> -->
+    </div>  
+    <div class="col-md-6">
+        <div style="background-color: white; height: 500px; margin-top: 10px; border:4px solid #00A65A; border-radius: 25px;">
+            <div class="col-md-12" ng-init="getAbsencesbyDept()">
+                <h3 class="text-black text-center">Absences by Department</h3>
+
+                <canvas id="pie" class="chart chart-pie chart-xs pieleave" chart-data="pie_data1"
+                chart-labels="pie_labels1" chart-colors="pie_colour1"
+                chart-options="pie_options1" legend="true"
+                style="height: 160px;" width="420" ></canvas>
+            
+                <span class="legend-scale text-center p15"></span>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div style="background-color: white; height: 500px; margin-top: 10px; border:4px solid #00A65A; border-radius: 25px;">
+            
+            
+            <div class="col-md-12" ng-init="getLatesbyDept()">
+                <h3 class="text-black text-center">Lates by Department</h3>
+                <!-- <canvas id="pie-chart"></canvas> -->
+                <canvas id="pie" class="chart chart-pie chart-xs pieleave" chart-data="pie_data2"
+                chart-labels="pie_labels2" chart-colors="pie_colour2"
+                chart-options="pie_options2" legend="true"
+                style="height: 160px;" width="420" ></canvas>
+            
+                <span class="legend-scale2 text-center p15"></span>
+
+            </div>
+            
+        </div>
+    </div>
+
+</div>

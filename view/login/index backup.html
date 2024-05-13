@@ -1,0 +1,105 @@
+<style type="text/css">
+.submitted .ng-invalid{
+    border: 1px solid red;
+}
+
+h2{font-weight:800}
+
+
+.btn-success:hover, .btn-success:active, .btn-success.hover {
+    background-color: #007ac9 !important;
+}
+
+.btn-success, .btn-success:active, .btn-success {
+    background-color: #005B96 !important;
+}
+
+.input-group { 
+  position: relative;
+  display: table;
+  border-collapse: separate;
+   margin-bottom: 15px;
+}
+.img-effect{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-bottom-right-radius: 50px;
+}
+.cptcha{
+	transform:scale(0.77);
+	-webkit-transform:scale(0.77);
+	transform-origin:0 0;
+	-webkit-transform-origin:0 0;
+}
+
+@media only screen and (max-width: 1366px) {
+  .login-box {
+    margin-top: 0px;
+  }
+}
+
+</style>
+<!-- .input-group input:after{
+	content:
+} -->
+	
+    <div class="container-fluid" ng-controller="LoginController" ng-init="cursor()">
+		<spinner name="form01spinner" ng-cloak="">
+            <div class="overlay"></div>
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <div class="please-wait">Please Wait...</div>
+        </spinner>
+		<div class="login-box" style="width: 100%; min-width: 360px; max-width: 500px;margin-bottom:0px">
+			<div class="login-logo" style="margin-bottom:20px">
+				<a href="https://www.n-pax.com/" style="cursor:pointer">
+					<img src="assets/images/bannerimg.png" class="img-responsive center-block" style="width:100%"/>
+				</a>
+			</div><!-- /.login-logo -->
+			<div class="login-box-body" style="    border: 1px solid #005B96; border-radius: 55px; padding: 50px; padding-bottom:0px">
+				<form ng-show="revertReset" ng-hide="mySignInForm" role="form" name="login" ng-submit='loginForm();'>
+					<div class="form-group has-feedback">
+						<input ng-model="username" id="uname" class="form-control" type="text" placeholder="User ID" required>           
+						<span class="glyphicon glyphicon-user form-control-feedback"></span>
+						<span><font color="red"></font></span>
+					</div>
+					<div class="form-group has-feedback">
+						<input ng-model="password" id="pword" class="form-control" type="password" placeholder="Password" required> 
+						<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+						<span><font color="red"></font></span>
+					</div>
+					<div class="row">
+						<div class="col-xs-12"> 
+							<input  type="submit" name="submit" value="Login" id="submit" class="btn btn-success btn-block btn-flat" ng-click="submitted=true" >
+						</div>
+					</div>
+				</form> 
+				<form ng-show="reset">
+					<div class="form-group has-feedback">
+						<input ng-model="resetusername" id="suname" class="form-control" type="text" placeholder="User ID" required>           
+						<span class="glyphicon glyphicon-user form-control-feedback"></span>
+						<span><font color="red"></font></span>
+					</div>
+					<div class="form-group has-feedback">
+						<input ng-model="resetsss" id="sss" class="form-control" type="text" placeholder="SSS Number" required> 
+						<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+						<span><font color="red"></font></span>
+					</div>
+					<div class="row">
+						<div class="col-xs-12"> 
+							<input style="background:#F39C12" type="submit" name="submit" value="Reset" id="submit" class="btn btn-success btn-block btn-flat" ng-click="resetForm();" >
+						</div>
+					</div>
+				</form> 
+				<div ng-if="revertReset" class="login-box-msg" style="margin-top:15px" ><a href="#/" ng-click="resetpw(2)"> </a></div> 
+				<div ng-if="reset" class="login-box-msg" style="margin-top:15px" ><a href="#/" ng-click="resetpw(1)">Back to Login</a></div> 
+				
+			</div>
+			<div class="login-logo" style="margin-bottom:0px">
+				<a href="https://www.n-pax.com/" style="cursor:pointer">
+					<img src="assets/images/npax_slogo.png" class="img-responsive center-block" style="width:40%;/*margin-top:35px*/"/>
+				</a>
+			</div><!-- /.login-logo -->
+		</div>
+    </div>

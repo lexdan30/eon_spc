@@ -1,0 +1,49 @@
+
+.bir-cont-center-container {
+    padding: 0px 10px;
+    margin-bottom: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+    height: 100%;
+    background-color: #ffff;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+.bir-header-cont{
+    padding-top: 20px;
+    text-align: center;
+}
+.bir-cont-header{
+    font-weight: bolder;
+    font-size: 130%;
+}
+.bir-cont-subheader{
+    padding-top: -30px;
+    font-weight: bolder;
+    font-size: 125%;
+}
+.bir-cont-subheader2{
+    font-weight: bolder;
+    font-size: 120%;
+}
+.table-bir-cont, td.left, th.left {
+    text-align: left;
+    border:0;
+    }
+    .td-right{
+        text-align:right;
+        padding-right:15px;
+        border:0;
+    }
+    .td-center{
+        text-align:center;
+        border:0;
+    }
+
+    /* ========2nd tab====== */
+ 
+  

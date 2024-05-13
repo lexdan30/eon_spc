@@ -1,0 +1,28 @@
+<div class="row" style="height: 100vh; padding-top:15px"  ng-init="headcount_functions.total_range()">
+    <div class="col-xs-12" style="border-bottom: 5px solid rgb(68, 68, 68); padding-right:25px;padding-left:25px" ng-init="headcount_functions.total_emp()">
+        <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 10px;font-weight:600 !important">
+            {{ headcount_functions.values.totalhc }} Headcount As Of {{ headcount_functions.values.datecurr }}
+        </h3>
+        <button class="btn btn-primary pull-right" onclick="window.location.reload();"><i class="fa fa-arrow-left" aria-hidden="true"> </i> Back to Dashboard</button>
+    </div>
+    <div class="col-xs-12" >
+        <!--div class="col-md-4">
+            <h3 style="text-indent: 50px;" class="text-black text-left">Total Employees : {{}}</h3>
+        </div-->
+        <div class="col-xs-12 text-center">
+            <h3 style="text-indent: 50px;" class="text-black">
+                Date Range <input id="dtrangeLine" type="text" style="border: none;border-bottom: 1px solid;text-align-last: center;" class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched pull" >
+            </h3>
+        </div>
+        <h3 class="text-black text-center">Headcount by Department</h3>
+		<h4 class="text-black text-center" ng-show="headcount_functions.values.rangetot > 0" >{{ headcount_functions.values.rangetot + ' Total Employees' }} </h4>
+		<div id="ChartContent" style="overflow:auto;">
+			<canvas id="hbmLine" width="1660" height="300" style="width:1660px !important;height:300px !important;margin-left: auto !important;margin-right: auto !important;"></canvas>
+		</div>
+    </div>
+	
+    <!--div class="col-md-12" style="margin-top: 50px; height: 280px; margin-bottom: 50px;" ng-init="headcountbymonth();">
+        <h3 class="text-black text-left">Headcount by Month</h3>
+        <canvas id="bar" class="chart-bar"></canvas>
+    </div-->
+</div>

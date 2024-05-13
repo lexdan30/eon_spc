@@ -1,0 +1,335 @@
+.sss-center-container {
+    padding: 0px 10px;
+    margin-bottom: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+    height: 45vh;
+    background-color: #ffff;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.sss-header-cont{
+    padding-top: 20px;
+    text-align: center;
+}
+.sss-contribution-header,.remittance--3{
+    font-weight: bolder;
+    font-size: 130%;
+    text-align: center;
+}
+.sss-grid{
+    height: 40vh;
+}
+
+/* ===================First Tab================== */
+.transmittal{
+    grid-area: first;
+    height: 20vh;
+    /* background-color:red; */
+    display:grid;
+    grid-template-columns: 280px 10px 250px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "transmittal-r1 transmittal-r1-2 transmittal-r1-3"
+    "transmittal-r2 transmittal-r2-2 transmittal-r2-3"
+    "transmittal-r3 transmittal-r3-2 transmittal-r3-3"
+    "transmittal-r4 transmittal-r4-2 transmittal-r4-3"
+    "transmittal-r5 transmittal-r5-2 transmittal-r5-3"
+    "transmittal-r6 transmittal-r6-2 transmittal-r6-3"
+    "transmittal-r7 transmittal-r7-2 transmittal-r7-3";
+    grid-gap:0;
+    overflow: hidden;
+}
+
+.transmittal-r1{
+    grid-area: transmittal-r1;
+}
+.transmittal-r1-2{
+    grid-area: transmittal-r1-2;
+}
+.transmittal-r1-3{
+    border-bottom: 3px solid #333;
+    grid-area: transmittal-r1-3;
+}
+.transmittal-r2{
+    grid-area: transmittal-r2;
+    height: 4vh;
+}
+.transmittal-r2-2{
+    grid-area: transmittal-r2-2;
+}
+.transmittal-r2-3{
+    border-bottom: 3px solid #333;
+    grid-area: transmittal-r2-3;
+}
+.transmittal-r3{
+    grid-area: transmittal-r3;
+}
+.transmittal-r3-2{
+    grid-area: transmittal-r3-2;
+}
+.transmittal-r3-3{
+    border-bottom: 3px solid #333;
+    grid-area: transmittal-r3-3;
+}
+.transmittal-r4{
+    grid-area: transmittal-r4;
+}
+.transmittal-r4-2{
+    grid-area: transmittal-r4-2;
+}
+.transmittal-r4-3{
+    border-bottom: 3px solid #333;
+    grid-area: transmittal-r4-3;
+}
+.transmittal-r5{
+    grid-area: transmittal-r5;
+}
+.transmittal-r5-2{
+    grid-area: transmittal-r5-2;
+}
+.transmittal-r5-3{
+    border-bottom: 3px solid #333;
+    grid-area: transmittal-r5-3;
+}
+.transmittal-r6{
+    grid-area: transmittal-r6;
+}
+.transmittal-r6-2{
+    grid-area: transmittal-r6-2;
+}
+.transmittal-r6-3{
+    border-bottom: 3px solid #333;
+    grid-area: transmittal-r6-3;
+}
+.transmittal-r7{
+    grid-area: transmittal-r7;
+}
+.transmittal-r7-2{
+    grid-area: transmittal-r7-2;
+}
+.transmittal-r7-3{
+    border-bottom: 3px solid #333;
+    grid-area: transmittal-r7-3;
+}
+
+.remittance{
+    height: 20vh;
+    /* background-color:red; */
+    display:grid;
+    grid-template-columns: 280px 10px 250px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "remittance1 remittance--2 remittance--3"
+    "remittance-r1 remittance-r1-2 remittance-r1-3"
+    "remittance-r2 remittance-r2-2 remittance-r2-3"
+    "remittance-r3 remittance-r3-2 remittance-r3-3"
+    "remittance-r4 remittance-r4-2 remittance-r4-3"
+    "remittance-r5 remittance-r5-2 remittance-r5-3";
+    grid-gap:0;
+    overflow: hidden;
+}
+.remittance1{
+    grid-area: remittance1;
+    height: 5vh;
+}
+.remittance--2{
+    grid-area: remittance--2;
+    height: 5vh;
+}
+.remittance--3{
+    grid-area: remittance--3;
+    height: 5vh;
+}
+.remittance-r1{
+    grid-area: remittance-r1;
+}
+.remittance-r1-2{
+    grid-area: remittance-r1-2;
+}
+.remittance-r1-3{
+    border-bottom: 3px solid #333;
+    grid-area: remittance-r1-3;
+}
+.remittance-r2{
+    grid-area: remittance-r2;
+    text-align: center;
+}
+.remittance-r2-2{
+    grid-area: remittance-r2-2;
+}
+.remittance-r2-3{
+    border-bottom: 3px solid #333;
+    grid-area: remittance-r2-3;
+}
+.remittance-r3{
+    grid-area: remittance-r3;
+    text-align: center;
+}
+.remittance-r3-2{
+    grid-area: remittance-r3-2;
+}
+.remittance-r3-3{
+    border-bottom: 3px solid #333;
+    grid-area: remittance-r3-3;
+}
+.remittance-r4{
+    grid-area: remittance-r4;
+}
+.remittance-r4-2{
+    grid-area: remittance-r4-2;
+}
+.remittance-r4-3{
+    border-bottom: 3px solid #333;
+    grid-area: remittance-r4-3;
+}
+.remittance-r5{
+    grid-area: remittance-r5;
+}
+.remittance-r5-2{
+    grid-area: remittance-r5-2;
+}
+.remittance-r5-3{
+    border-bottom: 3px solid #333;
+    grid-area: remittance-r5-3;
+}
+/* ===================First Tab================== */
+
+/* ===================Second Tab================== */
+.sss-loan-center-container {
+    padding: 0px 10px;
+    margin-bottom: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+    height: 100%;
+    background-color: #ffff;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.sss-header-remit{
+    padding-top: 20px;
+    text-align: center;
+}
+.sss-remittance-header{
+    font-weight: bolder;
+    font-size: 130%;
+}
+.sss-remittance-subheader{
+    padding-top: -30px;
+    font-weight: bolder;
+    font-size: 125%;
+}
+.sss-remittance-subheader2{
+    font-weight: bolder;
+    font-size: 120%;
+}
+.table-sss-remittance, td.left, th.left {
+    text-align: left;
+    border:0;
+    }
+    .td-right{
+        text-align:right;
+        padding-right:15px;
+        border:0;
+    }
+    .td-center{
+        text-align:center;
+        border:0;
+    }
+/* ===================Second Tab================== */
+/* SSS PROFILE */
+.white-font{
+    color:white;
+}
+.first-profilebox{
+    display:flex;
+    flex-direction: column;
+    height: 105px;
+}
+
+.emptyrow{
+    display:flex;
+    height: 30px;
+
+}
+.emptyrow-1{
+    flex:1;
+    height: 30px;
+}
+.emptyrow-2{
+    flex:2;
+    height: 30px;
+}
+.emptyrow-3{
+    flex:1;
+    height: 30px;
+}
+
+.first-profile-row1{
+    display:flex;
+    padding-top:2px;
+    height: 45px;
+    background: #39cccc;
+}
+.first-profile-row1-1{
+    flex:1;
+}
+.first-profile-row1-2{
+    flex:2;
+}
+.second-profilebox{
+    display:flex;
+    flex-direction: column;
+    height: 182px;
+}
+.second-profile-row1{
+    display:flex;
+    height: 25px;
+}
+.second-profile-row1-1{
+    flex:1;
+    background: #39cccc;
+}
+.second-profile-row1-2{
+    flex:2;
+}
+.second-profile-row1-3{
+    flex:1;
+}
+.second-profile-row2{
+    display:flex;
+    height: 45px;
+}
+.second-profile-row2-1{
+    flex:1;
+    background: #39cccc;
+}
+.second-profile-row2-2{
+    flex:2;
+}
+.second-profile-row2-3{
+    flex:1;
+}
+.third-profilebox{
+    display:flex;
+    flex-direction: column;
+    height: 140px;
+}
+.first-profilebox>div,.first-profile-row1,.second-profilebox,.second-profile-row1-1,.second-profile-row1-2,
+.second-profile-row2-1,.second-profile-row2-2,.third-profilebox
+{
+    border:1px #333 solid;
+    overflow: hidden;
+}
+.first-profilebox>div,.second-profile-row1-1,.second-profile-row1-2,
+.second-profile-row2-1,.second-profile-row2-2
+{
+    padding-left: 5px;
+}
+/* =============SSS LOAN=========== */

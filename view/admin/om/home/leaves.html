@@ -1,0 +1,294 @@
+<!-- <div class="row" style="height: auto;"> -->
+    <!-- <div class="col-md-12 col-xs-12" style="border-bottom: 5px solid rgb(68, 68, 68); "> -->
+        <!-- <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 10px;"> -->
+            <!-- Total Leave -->
+        <!-- </h3> -->
+        <!-- <button class="btn btn-primary pull-right" onclick="window.location.reload();"><i class="fa fa-arrow-left" -->
+                <!-- aria-hidden="true"> </i> Back to Dashboard</button> -->
+    <!-- </div> -->
+    <!-- <div class="col-md-7 col-xs-12" style="padding: 7px;"> -->
+        <!-- <div style="background-color: #9dc3e7; height: 650px; margin-top: 10px; padding-top: 10px;"> -->
+            <!-- <div class="col-md-6 col-xs-6 p100lr" ng-init="getTotalLeaveYTD()"> -->
+                <!-- <div class="panel panel-default"> -->
+                    <!-- <div class="panel-body text-center fsto"> -->
+                        <!-- <p class="nomargin">{{totalemployeesLeaveYTD[0].tot_units}}</p> -->
+                        <!-- <p class="nomargin">YTD Leave Hours</p> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-6 col-xs-6 p100lr"> -->
+                <!-- <div class="panel panel-default"> -->
+                    <!-- <div class="panel-body text-center fsto"> -->
+                        <!-- <p class="nomargin">₱ {{totalemployeesLeaveYTD[0].getTotAmt[0].amount}}</p> -->
+                        <!-- <p class="nomargin">YTD Leave Amount</p> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-12 col-xs-12" style="height: 200px; margin-bottom: 50px;" ng-init="headcount_functions_leave();"> -->
+                <!-- <h4 class="text-black text-center" style="margin-top: 0px;">Leave by Department</h4> -->
+                
+                <!-- <div style="overflow:auto;"> -->
+                    <!-- <canvas id="hbmLine23" width="1660" height="300" style="width:1660px !important;height:300px !important;margin-left: auto !important;margin-right: auto !important;"></canvas> -->
+                <!-- </div> -->
+
+            <!-- </div> -->
+            <!-- <div class="col-md-12 col-xs-12" style="height: 200px; margin-bottom: 50px;" ng-init="barchartdivLeaveMonth();"> -->
+                <!-- <div class="col-md-8 col-xs-6">  -->
+                    <!-- <h4 class="text-black text-left" style="margin-top: 0px;">Leave by Month</h4> -->
+                <!-- </div> -->
+            
+                <!-- <div class="col-md-4 col-xs-6"> -->
+                    <!-- <select class="form-control text-right" ng-model="search_leave_month" ng-change="barchartdivLeaveMonth()"> -->
+                        <!-- <option value="">Select Month</option> -->
+                        <!-- <option value="1">January</option> -->
+                        <!-- <option value="2">February</option> -->
+                        <!-- <option value="3">March</option> -->
+                        <!-- <option value="4">April</option> -->
+                        <!-- <option value="5">May</option> -->
+                        <!-- <option value="6">June</option> -->
+                        <!-- <option value="7">July</option> -->
+                        <!-- <option value="8">August</option> -->
+                        <!-- <option value="9">September</option> -->
+                        <!-- <option value="10">October</option> -->
+                        <!-- <option value="11">November</option> -->
+                        <!-- <option value="12">December</option> -->
+                    <!-- </select> -->
+                <!-- </div> -->
+                <!-- <div style="width:99%"> -->
+                    <!-- <canvas id="bar23" class="chart-bar" width="1660" height="300" style="width:1660px !important;height:300px !important;margin-left: auto !important;margin-right: auto !important;"></canvas> -->
+                <!-- </div> -->
+
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="col-md-5 col-xs-12" style="padding: 7px; margin-bottom: 10px;"> -->
+        <!-- <div style="background-color: #f8cbac; height: 650px; margin-top: 10px; padding-top: 10px;"> -->
+            <!-- <div class="col-md-12" style=" padding-bottom: 10px;"> -->
+                <!-- <div class="col-md-6"> -->
+                    <!-- <div class="form-group"> -->
+                        <!-- <label>Company</label> -->
+                        <!-- <select class="form-control" disabled> -->
+                            <!-- <option>{{compensationCompanyName.company_name}}</option> -->
+                        <!-- </select> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="col-md-6"> -->
+                    <!-- <div class="form-group"> -->
+                        <!-- <label>Cost Center</label> -->
+                        <!-- <select class="form-control" id="costce" ng-model="costcenter" ng-change="totalEmpLeaves()" -->
+                        <!-- ng-options="dept.costcenter as dept.costcenter for dept in dashboard.values.department | filter: typeLimit track by dept.costcenter"> -->
+                            <!-- <option value="">ALL</option> -->
+                        <!-- </select> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="col-md-6"> -->
+                    <!-- <div class="form-group"> -->
+                        <!-- <label>Department</label> -->
+                        <!-- <select class="form-control" id="short3unit" ng-model="department" ng-change="totalEmpLeaves()" -->
+                        <!-- ng-options="dept.id as dept.name for dept in dashboard.values.department | filter: typeLimit track by dept.id"> -->
+                            <!-- <option value="">ALL</option> -->
+                        <!-- </select> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="col-md-6"> -->
+                    <!-- <div class="form-group"> -->
+                        <!-- <label>Location</label> -->
+                        <!-- <select class="form-control" id="jobloc" ng-model="jobloc" ng-change="totalEmpLeaves()" -->
+                        <!-- ng-options="jobloc.id as jobloc.loc for jobloc in dashboard.values.joblocation | filter: typeLimit track by jobloc.id"> -->
+                            <!-- <option value="">ALL</option> -->
+                        <!-- </select> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-12" style="height: 200px;"> -->
+                <!-- <div class="style-15" style="overflow: auto; height: inherit;" ng-init="totalEmpLeaves()"> -->
+                    <!-- <table class="example2 table table-bordered table-hover table-condensed table-striped nomargin" -->
+                        <!-- style="background-color: white;"> -->
+                        <!-- <thead> -->
+                            <!-- <tr> -->
+                                <!-- <th style="background-color: rgb(41, 40, 40);">Employee</th> -->
+                                <!-- <th style="background-color: rgb(41, 40, 40);">Start Date</th> -->
+                                <!-- <th style="background-color: rgb(41, 40, 40);">End Date</th> -->
+                                <!-- <th style="background-color: rgb(41, 40, 40);">No.of Days</th> -->
+                            <!-- </tr> -->
+                        <!-- </thead> -->
+                        <!-- <tbody> -->
+                            <!-- <tr ng-repeat="view in totalemployeesEmpLeaves track by $index"> -->
+                                <!-- <td class="text-left">{{view.empname}}</td> -->
+                                <!-- <td class="text-center">{{view.sdate}}</td> -->
+                                <!-- <td class="text-center">{{view.edate}}</td> -->
+                                <!-- <td class="text-center">{{view.no_days}}</td> -->
+                            <!-- </tr> -->
+                        <!-- </tbody> -->
+                    <!-- </table> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-12 col-xs-12" style="height: 230px; margin-top: 20px; margin-bottom: 10px;" ng-init="piechartdivsLeaves()"> -->
+                <!-- <h4 class="text-black text-center">Schedule Leave Vs. Absence Hours</h4> -->
+               
+                <!-- <canvas id="pie" class="chart chart-pie chart-xs pieleave" chart-data="pie_data1" -->
+                <!-- chart-labels="pie_labels1" chart-colors="pie_colour1" -->
+                <!-- chart-options="pie_options1" legend="true" -->
+                <!-- style="height: 160px;" width="420" ></canvas> -->
+            
+                <!-- <span class="legend-scale text-center p15"></span> -->
+
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+
+<!-- </div> -->
+<div class="row" style="height: auto;">
+    <div class="col-md-12 col-xs-12" style="border-bottom: 5px solid rgb(68, 68, 68); ">
+        <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 10px;">
+            Total Leave
+        </h3>
+        <button class="btn btn-primary pull-right" onclick="window.location.reload();"><i class="fa fa-arrow-left"
+                aria-hidden="true"> </i> Back to Dashboard</button>
+    </div>
+
+    <div class="col-md-12" style="padding-bottom: 15px;">
+
+        <div class="col-md-5 col-xs-12" style="padding: 7px; margin-bottom: 10px;">
+            <div style="background-color: #ec711e;color:white; height: 650px; margin-top: 10px; padding-top: 10px; border:4px solid #ae4f0f; border-radius: 25px;">
+                <div class="col-md-12" style=" padding-bottom: 10px;">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Company</label>
+                            <select class="form-control" disabled>
+                                <option>{{compensationCompanyName.company_name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Cost Center</label>
+                            <select class="form-control" id="costce" ng-model="costcenter" ng-change="totalEmpLeaves()"
+                            ng-options="dept.costcenter as dept.costcenter for dept in dashboard.values.department | filter: {costcenter:'!!'} track by dept.costcenter">
+                                <option value="">ALL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Department</label>
+                            <select class="form-control" id="short3unit" ng-model="department" ng-change="totalEmpLeaves()"
+                            ng-options="dept.id as dept.name for dept in dashboard.values.department | filter: typeLimit track by dept.id">
+                                <option value="">ALL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Location</label>
+                            <select class="form-control" id="jobloc" ng-model="jobloc" ng-change="totalEmpLeaves()"
+                            ng-options="jobloc.id as jobloc.loc for jobloc in dashboard.values.joblocation | filter: typeLimit track by jobloc.id">
+                                <option value="">ALL</option>
+                            </select>
+                        </div>
+                    </div> -->
+                    
+                </div> 
+                <div class="col-md-12 p5" style="height: 200px;">
+                    <div class="col-md-12">
+                        <div class="wpnnotiOT style-15notiOT bhLV" ng-init="totalEmpLeaves()">
+
+                            <!-- style="overflow: auto; height: inherit;" -->
+                            <table class="example2 table table-bordered table-hover table-condensed table-striped nomargin"
+                                style="background-color: white;">
+                                <thead>
+                                    <tr>
+                                        <th style="background-color: rgb(41, 40, 40);">Employee</th>
+                                        <!-- <th style="background-color: rgb(41, 40, 40);">Start Date</th>
+                                        <th style="background-color: rgb(41, 40, 40);">End Date</th>  -->
+                                        <th style="background-color: rgb(41, 40, 40);">No.of Days</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="view in totalemployeesEmpLeaves track by $index" style="color:rgb(41, 40, 40) !important">
+                                        <td class="text-left">{{view.empname}}</td>
+                                        <!-- <td class="text-center">{{view.sdate}}</td>
+                                        <td class="text-center">{{view.edate}}</td>  -->
+                                        <td class="text-center">{{view.no_days}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12" style="height: 230px; margin-top: 20px; margin-bottom: 10px;" ng-init="piechartdivsLeaves()">
+                    <h4 class="text-black text-center">Schedule Leave Vs. Absence Hours</h4>
+                
+                    <canvas id="pie" class="chart chart-pie chart-xs pieleave" chart-data="pie_data1"
+                    chart-labels="pie_labels1" chart-colors="pie_colour1"
+                    chart-options="pie_options1" legend="true"
+                    style="height: 160px;" width="420" ></canvas>
+                
+                    <span class="legend-scale text-center p15"></span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7 col-xs-12" style="padding: 7px;">
+            <div style="background-color: #00A65A; height: 670px; margin-top: 10px; border:4px solid #00A65A; border-radius: 25px;">
+                <div class="col-md-12" style="background-color:white !important;border-top-left-radius: 25px;border-top-right-radius: 25px; border-bottom: 25px 4px solid #0073B7 !important;"> 
+                    <div class="col-md-6 col-xs-6 p100lr" ng-init="getTotalLeaveYTD()">
+                        <div class="panel panel-default" style="border:unset">
+                            <div class="panel-body text-center fsto">
+                                <p class="nomargin">{{totalemployeesLeaveYTD[0].tot_units}}</p>
+                                <p class="nomargin">YTD Leave Hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-6 p100lr">
+                        <div class="panel panel-default" style="border:unset">
+                            <div class="panel-body text-center fsto">
+                                <p class="nomargin">{{totalemployeesLeaveYTD[0].getTotAmt}}</p>
+                                <p class="nomargin">YTD Leave Count</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" style=" margin: 20px 0 20px;"> 
+                    <div class="col-md-12 col-xs-12" style="height: auto; margin-bottom: 50px;padding-top: 10px;background-color:white !important;margin-bottom: 30px;border-radius: 15px; " ng-init="headcount_functions_leave();">
+                        <h4 class="text-black text-center" style="margin-top: 0px;">Leave by Department</h4>
+                        
+                        <div style="overflow:auto;">
+                            <canvas id="hbmLine23" width="1660" height="300" style="width:1660px !important;height:300px !important;margin-left: auto !important;margin-right: auto !important;"></canvas>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-12 col-xs-12" style="height: 250px; margin-bottom: 50px;background-color:white !important;margin-bottom: 30px;border-radius: 15px;" ng-init="barchartdivLeaveMonth();">
+                            <div class="col-md-8 col-xs-6" style="padding-top: 20px"> 
+                                <h4 class="text-black text-left" style="margin-top: 0px;">Leave by Month</h4>
+                            </div>
+                        
+                            <div class="col-md-4 col-xs-6" style="padding-top: 20px">
+                                <select  id="selectLVmonth" class="form-control text-right" ng-model="search_leave_month" ng-change="barchartdivLeaveMonth()">
+                                    <option value="">Select Month</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+                        
+                        <div style="width:99%;">
+                            <canvas id="bar23" class="chart-bar" width="1660" height="300" style="width:1660px !important;height:300px !important;margin-left: auto !important;margin-right: auto !important;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

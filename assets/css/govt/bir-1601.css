@@ -1,0 +1,686 @@
+.bir-main-container{
+    padding: 0px 10px;
+    margin-bottom: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+    height: 100%;
+    background-color: #ffff;
+    overflow: hidden;
+}
+.bir-1601-container-1 {
+    display: flex;
+}
+.bir-1601-container-2,.bir-1601-container-3,.bir-1601-container-4>div,
+.bir-1601-container-5, .bir-1601-container-6>div,.bir-1601-container-7>div,.bir-1601-container-8>div
+,.bir-1601-container-9>div, .bir-1601-container-10
+,.bir-1601-container-23,.bir-1601-container-24>div,.bir-1601-container-25>div
+,.bir-1601-container-26>div,.bir-1601-container-27>div,.bir-1601-container-28
+,.bir-1601-container-29>div,.bir-wrapper>div,.half-inside>div
+,.bir-1601-container-30>div,.bir-1601-container-31>div
+,.bir-1601-container-34>div,.bir-1601-container-35,.half-inside-2>div 
+{
+    border:1px #333 solid;
+    padding:5px;
+    overflow: hidden;
+}
+.bir-1601-container-4>div,.bir-1601-container-5>div,.bir-1601-container-6>div
+,.bir-1601-container-7>div,.bir-1601-container-8>div,.bir-1601-container-9>div
+,.bir-1601-container-10>div,.bir-1601-container-11>div,.bir-1601-container-12>div
+,.bir-1601-container-13>div,.bir-1601-container-14>div,.bir-1601-container-15>div
+,.bir-1601-container-16>div,.bir-1601-container-17>div
+,.bir-1601-container-19>div,.bir-1601-container-18>div
+,.bir-1601-container-20,.bir-1601-container-21>div
+,.bir-1601-container-22>div,.bir-1601-container-23,.bir-1601-container-24>div
+,.bir-1601-container-28,.bir-1601-container-31>div,.caption1-34,.half-inside-2>div 
+,.half-inside-3,.half-inside-21>div{
+    background:#C0C0C0;
+    padding:0;
+}
+.bir-1601-container-11,.bir-1601-container-12
+,.bir-1601-container-13,.bir-1601-container-14,.bir-1601-container-15
+,.bir-1601-container-16,.bir-1601-container-17
+,.bir-1601-container-19,.bir-1601-container-18
+,.bir-1601-container-20,.bir-1601-container-21
+,.bir-1601-container-22,.bir-1601-container-23
+,.bir-1601-container-32>div,.bir-1601-container-33{
+    border-left:1px #333 solid;
+    border-right:1px #333 solid;
+}
+.caption1-18 {
+    font-size: medium;
+}
+.h1-1{
+    flex:4;
+    height:25px;
+    font-size: small;
+}
+.h2-1{
+    flex:1;
+    height:25px;
+    font-size: small;
+}
+.h3-1{
+    flex:1;
+    height:25px;
+    font-size: small;
+}
+.bir-1601-container-2 {
+    display: flex;
+}
+.icon-1601{
+    height:100px;
+    object-fit: cover;
+    background:url(../../images/govt/bir-form-logo.webp);
+    background-repeat: no-repeat;
+    flex:.7;
+}
+.caption1-2{
+    height:100px;
+    font-size: medium;
+    flex:2;
+}
+.title-2{
+    height:100px;
+    font-weight: bolder;
+    font-size:25px;
+    flex:3;
+}
+.bir-no-2{
+    height:100px;
+    font-size: medium;
+    flex:1;
+}
+.form-1601{
+    font-weight: bolder;
+    font-size:35px;
+}
+.bir-1601-container-3 {
+    display: flex;
+}
+.caption1-3{
+    height:20px;
+    font-size: small;
+}
+.bir-1601-container-4 {
+    display: flex;
+}
+.item1-4{
+    height:60px;
+    flex:2;
+}
+.item2-4{
+    height:60px;
+    flex:1;
+}
+.item3-4{
+    height:60px;
+    flex:1;
+}
+.item4-4{
+    height:60px;
+    flex:1;
+}
+.bir-1601-container-5 {
+    display: flex;
+}
+.caption1-5{
+    height:22px;
+    flex:1.5;
+}
+.caption2-5{
+    height:22px;
+    flex:2;
+}
+.bir-1601-container-6 {
+    display: flex;
+}
+.item1-6{
+    height:60px;
+    flex:2;
+}
+.item2-6{
+    height:60px;
+    flex:1;
+}
+.item3-6{
+    height:60px;
+    flex:1;
+}
+.bir-1601-container-7 {
+    display: flex;
+}
+.item1-7{
+    height:60px;
+    flex:3;
+}
+.item2-7{
+    height:60px;
+    flex:1;
+}
+.bir-1601-container-8 {
+    display: flex;
+}
+.item1-8{
+    height:60px;
+    flex:3;
+}
+.item2-8{
+    height:60px;
+    flex:1;
+}
+.bir-1601-container-9 {
+    display: flex;
+}
+.item1-9{
+    height:60px;
+    flex:1;
+}
+.item2-9{
+    height:60px;
+    flex:2;
+}
+.item3-9{
+    height:60px;
+    flex:1;
+}
+.bir-1601-container-10 {
+    display: flex;
+}
+.caption1-10{
+    height:22px;
+    flex:1.5;
+}
+.caption2-10{
+    height:22px;
+    flex:2;
+}
+.bir-1601-container-11 {
+    display: flex;
+}
+.caption1-11{
+    height:27px;
+    flex:1.3;
+}
+.caption2-11{
+    height:27px;
+    flex:1;
+}
+.caption2-11{
+    height:27px;
+    flex:1;
+}
+.bir-1601-container-12 {
+    display: flex;
+}
+.caption1-12{
+    height:35px;
+    flex:1.3;
+}
+.caption2-12{
+    height:35px;
+    flex:1;
+}
+.caption2-12{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-13 {
+    display: flex;
+}
+.caption1-13{
+    height:35px;
+    flex:1.3;
+}
+.caption2-13{
+    height:35px;
+    flex:1;
+}
+.caption2-13{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-14 {
+    display: flex;
+}
+.caption1-14{
+    height:35px;
+    flex:1.3;
+}
+.caption2-14{
+    height:35px;
+    flex:1;
+}
+.caption2-14{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-15 {
+    display: flex;
+}
+.caption1-15{
+    height:35px;
+    flex:1.3;
+}
+.caption2-15{
+    height:35px;
+    flex:1;
+}
+.caption2-15{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-16 {
+    display: flex;
+}
+.caption1-16{
+    height:35px;
+    flex:1.3;
+}
+.caption2-16{
+    height:35px;
+    flex:1;
+}
+.caption2-16{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-17 {
+    display: flex;
+}
+.caption1-17{
+    height:35px;
+    flex:1.3;
+}
+.caption2-17{
+    height:35px;
+    flex:1;
+}
+.caption2-17{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-18 {
+    display: flex;
+}
+.caption1-18{
+    height:35px;
+    width: 58%;
+}
+.caption2-18{
+    height:35px;
+    width: 0%;
+}
+.caption2-18{
+    height:35px;
+    width: 40%;
+}
+.bir-1601-container-19 {
+    display: flex;
+}
+.caption1-19{
+    height:35px;
+    flex:1.3;
+}
+.caption2-19{
+    height:35px;
+    flex:1;
+}
+.caption2-19{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-20 {
+    display: flex;
+}
+.caption1-20{
+    height:18px;
+}
+.bir-1601-container-21 {
+    display: flex;
+}
+.caption1-21{
+    height:55px;
+    flex:1;
+}
+.caption2-21{
+    height:55px;
+    flex:1;
+}
+.caption3-21{
+    height:55px;
+    flex:1;
+}
+.caption4-21{
+    height:55px;
+    flex:1.5;
+}
+.bir-1601-container-22 {
+    display: flex;
+}
+.caption1-22{
+    height:35px;
+    flex:2.0;
+}
+.caption2-22{
+    height:35px;
+    width:.5;
+}
+.caption2-22{
+    height:35px;
+    flex:1.5;
+}
+.bir-1601-container-23 {
+    display: flex;
+}
+.caption1-23{
+    height:22px;
+    flex:1;
+}
+.caption2-23{
+    height:22px;
+    flex:2;
+}
+.bir-1601-container-24 {
+    display: flex;
+}
+.caption1-24{
+    height:65px;
+    flex:1;
+}
+.caption2-24{
+    height:65px;
+    flex:1;
+}
+.caption3-24{
+    height:65px;
+    flex:1;
+}
+.caption4-24{
+    height:65px;
+    flex:1;
+}
+.bir-1601-container-25 {
+    display: flex;
+}
+.caption1-25{
+    height:35px;
+    flex:1;
+}
+.caption2-25{
+    height:35px;
+    flex:1;
+}
+.caption3-25{
+    height:35px;
+    flex:1;
+}
+.caption4-25{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-26 {
+    display: flex;
+}
+.caption1-26{
+    height:35px;
+    flex:1;
+}
+.caption2-26{
+    height:35px;
+    flex:1;
+}
+.caption3-26{
+    height:35px;
+    flex:1;
+}
+.caption4-26{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-27 {
+    display: flex;
+}
+.caption1-27{
+    height:35px;
+    flex:1;
+}
+.caption2-27{
+    height:35px;
+    flex:1;
+}
+.caption3-27{
+    height:35px;
+    flex:1;
+}
+.caption4-27{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-28 {
+    display: flex;
+}
+.caption1-28{
+    height:22px;
+    flex:1;
+}
+.bir-1601-container-29 {
+    display: flex;
+}
+.caption1-29{
+    height:65px;
+    flex:1;
+}
+.caption2-29{
+    height:65px;
+    flex:1;
+}
+.bir-wrapper{
+    height:65px;
+    flex:2.08;
+    display:flex;
+    flex-direction: column;
+}
+.full-inside{
+    height:22px;
+}
+/* .caption3full-29{
+    height:20px;
+} */
+.half-inside{
+    display:flex;
+    height:43px;
+}
+.caption3-29{
+    height:43px;
+    flex:1;
+}
+.caption4-29{
+    height:43px;
+    flex:1;
+}
+.bir-1601-container-30 {
+    display: flex;
+}
+.caption1-30{
+    height:35px;
+    flex:1;
+}
+.caption2-30{
+    height:35px;
+    flex:1;
+}
+.caption3-30{
+    height:35px;
+    flex:1;
+}
+.caption4-30{
+    height:35px;
+    flex:1;
+}
+.bir-1601-container-31 {
+    display: flex;
+}
+.caption1-31{
+    height:35px;
+    flex:2;
+    display: flex;
+    align-items: center;
+}
+.caption2-31{
+    height:35px;
+    flex:1.5;
+}
+.caption3-31{
+    height:35px;
+    flex:.5;
+}
+.bir-1601-container-32 {
+    display: flex;
+}
+.caption1-32{
+    height:45px;
+    flex:1;
+}
+.bir-1601-container-33 {
+    display: flex;
+}
+.caption1-33{
+    height:140px;
+    flex:2;
+}
+.caption2-33{
+    height:140px;
+    flex:1.5;
+}
+.caption3-33{
+    height:140px;
+    flex:.5;
+}
+.bir-1601-container-34 {
+    display: flex;
+}
+.caption1-34{
+    height:170px;
+    flex:3;
+}
+.caption0-34{
+    height:175px;
+    flex:.5;
+}
+.bir-wrapper-2{
+    height:175px;
+    flex:2.08;
+    display:flex;
+    flex-direction: column;
+}
+.half-inside-2{
+    display:flex;
+    height:40px;
+}
+.caption1-34{
+    height:40px;
+    flex:1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.caption2-34{
+    height:40px;
+    flex:1;
+}
+.caption3-34{
+    height:40px;
+    flex:1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.caption4-34{
+    height:40px;
+    flex:1.5;
+}
+.caption5-34{
+    height:40px;
+    flex:2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.buttomcenter{
+    width: auto;
+    text-align: center;
+}
+
+.caption1-34-1{
+    height:40px;
+    flex:1;
+}
+.caption2-34-2{
+    height:40px;
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caption3-34-3{
+    height:40px;
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caption4-34-4{
+    height:40px;
+    flex:1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caption5-34-5{
+    height:40px;
+    flex:2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.half-inside-21{
+    display:flex;
+    height:40px;
+}
+.half-inside-3{
+    display:flex;
+    height:35px;
+}
+.caption1-34-11{
+    height:35px;
+    flex:1;
+}
+.caption2-34-21{
+    height:35px;
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caption3-34-31{
+    height:35px;
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caption4-34-41{
+    height:35px;
+    flex:1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caption5-34-51{
+    height:35px;
+    flex:2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

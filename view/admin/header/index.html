@@ -1,0 +1,64 @@
+<style>
+    .skin-blue .main-header .navbar {
+        background-color: #005B96 !important;
+    }
+    .skin-blue .main-header .logo{
+        background-color: #005B96 !important;
+    }
+    .skin-blue .main-header .logo:hover{
+        background-color: #005B96 !important;
+    }
+</style>
+<!-- Logo -->
+<a href="" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini"><b>EON</b></span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg"><b>NXPERT</b> EON</span>
+</a>
+<!-- Header Navbar: style can be found in header.less -->
+<nav class="navbar navbar-static-top">
+    <!-- Sidebar toggle button-->
+    <!--update-->
+    <a href="" class="sidebar-toggle" data-toggle="offcanvas" role="button" ng-click="toggleside()">
+        <!--update-->
+        <span class="sr-only">Toggle navigation</span>
+    </a>
+
+    <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    <img ng-src="{{ dashboard.values.userInformation.pic }}" style="width:25px" class="user-image"
+                        alt="User Image">
+                    <span
+                        class="hidden-xs">{{ dashboard.values.userInformation.fname + ' ' + dashboard.values.userInformation.lname }}</span>
+                </a>
+                <ul class="dropdown-menu" style="    -webkit-border-radius: 15px; ">
+                    <!-- User image -->
+                    <li class="user-header" style="border-radius: 7px 7px 0px 0px;">
+                        <img ng-src="{{ dashboard.values.userInformation.pic }}" class="img-circle" alt="User Image">
+                        <p>
+                            {{ dashboard.values.userInformation.fname + ' ' + dashboard.values.userInformation.lname }}
+                            <small>{{ dashboard.values.userInformation.etype }}</small>
+                        </p>
+                    </li>
+                    <!-- Menu Body -->
+                    <li class="user-body" style="border-radius: 0px 0px 7px 7px;background:#333">
+                        <div class="pull-left">
+                            <a href="" ng-click="clearPassword();" data-toggle="modal" data-target="#editpassword"
+                                class="btn btn-default btn-flat" style="border-radius: 7px" >Change Password</a>
+                        </div>
+                        <div class="pull-right">
+                            <a href="" ng-click="dashboard.control.current.autoView('0');logOut();unsetUserInformation();"
+                                class="btn btn-default btn-flat" style="border-radius: 7px" >Sign out</a>
+                        </div>
+                        <!-- /.row -->
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</nav>

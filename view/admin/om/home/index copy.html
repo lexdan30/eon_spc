@@ -1,0 +1,538 @@
+<style>
+    .main-footer {
+        background: #fff;
+        padding: 5px;
+        color: #444;
+        border-top: 1px solid #d2d6de;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        z-index: 999;
+    }
+
+    .content-wrapper {
+        background: white
+    }
+
+    .example2 th {
+        color: white;
+        background-color: #006ba6;
+        text-align: center
+    }
+
+    .btnTD {
+        text-align: center;
+    }
+
+    .info {
+        font-weight: bold;
+    }
+
+    .ui-widget-header {
+        border: 1px solid green;
+        background: #008d4c;
+        color: black;
+    }
+
+    .lightbox-modal {
+        z-index: 99999 !important;
+    }
+
+    .bder {
+        border: 0px solid black;
+    }
+
+    .table-striped>tbody>tr:nth-child(odd)>td,
+    .table-striped>tbody>tr:nth-child(odd)>th {
+        background-color: #d9e5f3;
+    }
+
+    table.dataTable>tbody>tr.child ul li {
+        border-bottom: 0px solid #efefef !important;
+    }
+
+    .req-field {
+        color: red;
+    }
+
+    .paddingZero {
+        padding: 0px !important;
+    }
+
+    .txtresize {
+        resize: vertical;
+        min-height: 110px !important;
+    }
+
+    .sec-head {
+        overflow: hidden;
+        animation: bgColor 8s normal forwards;
+    }
+
+    .bgPulse {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bgPulse span {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+
+    }
+
+    .bgPulse span:nth-child(2n+1) {
+        background: transparent;
+        border: 5px solid #fff;
+    }
+
+    .bgPulse span:nth-child(1) {
+        border-radius: 12px;
+        top: 30%;
+        left: 30%;
+        animation: animate 10s linear infinite;
+    }
+
+    .bgPulse span:nth-child(2) {
+        top: 20%;
+        left: 50%;
+        animation: animate 15s linear infinite;
+    }
+
+    .bgPulse span:nth-child(3) {
+        top: 40%;
+        left: 70%;
+        animation: animate 20s linear infinite;
+    }
+
+    .bgPulse span:nth-child(4) {
+        border-radius: 12px;
+        top: 60%;
+        left: 80%;
+        animation: animate 12s linear infinite;
+    }
+
+    .bgPulse span:nth-child(5) {
+        top: 60%;
+        left: 40%;
+        animation: animate 17s linear infinite;
+    }
+
+    .bgPulse span:nth-child(6) {
+        border-radius: 12px;
+        top: 60%;
+        left: 60%;
+        animation: animate 22s linear infinite;
+    }
+
+    .bgPulse span:nth-child(7) {
+        top: 60%;
+        left: 20%;
+        animation: animate 17s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: scale(0) translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.4;
+        }
+
+        100% {
+            transform: scale(1) translateY(-100px) rotate(360deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes bgColor {
+        0% {
+            background: #00f383;
+        }
+
+        25% {
+            background: #00d976;
+        }
+
+        50% {
+            background: #00c068;
+        }
+
+        100% {
+            background: #00a65a;
+        }
+    }
+
+    .fc-day-grid-container {
+        overflow: hidden auto !important;
+        height: 340px !important;
+    }
+
+    .fc-widget-header {
+        margin-right: 0px;
+    }
+
+    .fc-more-cell {
+        text-align: center;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    .fc-view-container {
+        border: 1px solid #ddd;
+    }
+
+    .fc-day-grid-event {
+        background: none;
+        border: 0px;
+        color: black !important;
+        cursor: pointer !important
+    }
+
+    .fc-today-button {
+        visibility: hidden
+    }
+
+    .fc-unthemed td.fc-today {
+        background: #cef98a;
+    }
+
+    .my-legend .legend-title {
+        text-align: left;
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-size: 90%;
+    }
+
+    .my-legend .legend-scale ul {
+        margin: 0;
+        padding: 0;
+        float: left;
+        list-style: none;
+    }
+
+    .my-legend .legend-scale ul li {
+        display: block;
+        float: left;
+        width: 50px;
+        margin-bottom: 6px;
+        text-align: center;
+        font-size: 80%;
+        list-style: none;
+    }
+
+    .my-legend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 25px;
+        width: 50px;
+        padding: 5px;
+    }
+
+    .my-legend .legend-source {
+        font-size: 70%;
+        color: #999;
+        clear: both;
+    }
+
+    .my-legend a {
+        color: #777;
+    }
+
+    @media screen and (max-width: 1440px) {
+        .fsto {
+            font-size: 20px !important;
+        }
+
+        .fsi {
+            font-size: 18px !important;
+        }
+
+        .sec-head {
+            height: 112px !important;
+            padding-top: 0px !important;
+        }
+
+        h2 {
+            font-size: 18px !important;
+        }
+
+        .sec-head {
+            height: 112px !important;
+            padding-top: 0px !important;
+        }
+
+        .fc-button-group {
+            font-size: 9px;
+        }
+
+        .fc-toolbar .fc-header-toolbar {
+            margin-bottom: 0px;
+        }
+
+        h3 {
+            font-size: 20px !important;
+        }
+
+        .fsi {
+            font-size: 15px !important;
+        }
+
+        .ic {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 22px !important;
+        }
+
+        .p100lr {
+            padding-left: 50px !important;
+            padding-right: 50px !important;
+        }
+    }
+
+    @media screen and (max-width: 1280px) {
+        h2 {
+            font-size: 18px !important;
+        }
+
+        .sec-head {
+            height: 112px !important;
+            padding-top: 0px !important;
+        }
+
+        .fc-button-group {
+            font-size: 9px;
+        }
+
+        .fc-toolbar .fc-header-toolbar {
+            margin-bottom: 0px;
+        }
+
+        h3 {
+            font-size: 20px !important;
+        }
+
+        .fsi {
+            font-size: 15px !important;
+        }
+
+        .ic {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 22px !important;
+        }
+
+        .p100lr {
+            padding-left: 50px !important;
+            padding-right: 50px !important;
+        }
+
+    }
+
+
+    .fsto {
+        font-size: 24px;
+    }
+
+    .fs {
+        font-size: 20px;
+    }
+
+    .event-full {
+        color: #fff;
+        vertical-align: middle !important;
+        text-align: center;
+        opacity: 1;
+    }
+
+    .nomargin {
+        margin: 0px !important;
+    }
+
+    .p5 {
+        padding: 5px;
+    }
+
+    .ic {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+
+    .form-group {
+        margin: 0px;
+    }
+
+    .p100lr {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+</style>
+<div class="wrapper" ng-controller="HRHomeController" ng-init="dashboard.active();">
+
+    <div class="main-header" ng-include="headerTemplate"></div>
+    <div class="main-sidebar" ng-include="leftNavigationTemplate"></div>
+
+    <div class="content-wrapper">
+        <spinner name="form01spinner" ng-cloak="">
+            <div class="overlay"></div>
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <div class="please-wait">Please Wait...</div>
+        </spinner>
+        <section class="content-header sec-head"
+            style="height: 150px;color: #ffff;text-shadow: 12;box-shadow: 0 8px 6px -6px black;">
+            <div style="font-size: 9em;/*color: #00a65a !important;*/">
+                <i class="fa"
+                    style="background: url('assets/images/icons/HRIS Dashboard icon HR.webp');background-repeat: no-repeat;background-size: 115px;color: transparent;width: 120px;float: left;color:transparent">sss</i>
+                <div style="font-size: 12pt;padding-top: 15px;text-indent:15px">
+                    {{ dashboard.values.userInformation.db.company }}</div>
+                <div style="font-size: 20pt;text-indent:15px">HR Portal</div>
+                <div style="font-size: 15pt; text-indent:15px">Dashboard</div>
+            </div>
+            <ol class="breadcrumb" style="margin-left:125px;background: #f5f5f5 !important">
+                <li><a href=".#/admin/home"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href=".#/admin/hr/dashboard"> HR Portal</a></li>
+                <li class="active">Dashboard</li>
+            </ol>
+            <div class="bgPulse hidden-xs">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <section id="content" class="content"
+            style="padding-bottom: 50px !important;overflow-y:hidden;padding-top: 7px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-lg-6 col-sm-12 col-xs-12" style="padding:5px;">
+                        <div class="col-xs-12 bg-primary">
+                            <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 5px; font-size: 30px;">
+                                Attendance Today</h3>
+                            <h3 class="pull-right"
+                                style="margin-top: 5px; margin-bottom: 5px; font-size: 30px; margin-left: 20px;">
+                                July 20, 2020</h3>
+                            <i class="fa fa-calendar pull-right ic"></i>
+                        </div>
+                        <div class="col-xs-6 " style="margin-top: 1%;padding:0px;text-align:center;">
+
+                            <div style="padding: 25px 0;border-radius: 5px;">
+                                <i class="fa fa-user-secret fa-4x"></i>
+                                <p id="staff_data" class="counter-count_set1"
+                                    style="font-size: 45pt;font-weight: normal;margin-top: 10px;margin-bottom: 0;text-align: center;width: 225px;height: 200px;margin-right: auto;margin-left: auto;background: #f57000;vertical-align: middle;padding: 50px 15px;border-radius: 15px;color: white;">
+                                    0</p>
+                                <p class="count-text "
+                                    style="font-size: 35px;font-weight: normal;margin-top: 10px;margin-bottom: 0;text-align: center;">
+                                    Total Employees</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 " style="margin-top: 1%;padding:10px;text-align:center;">
+                            <button class="btn btn-lg btn-block" ng-click="viewcontent('headcount')"
+                                style="background: #f57000; color: white; margin-bottom: 15px; font-size: 26px;">Headcount
+                                by
+                                Dept.</button>
+                            <button class="btn btn-lg btn-block btn-success" ng-click="viewcontent('ovetime')"
+                                style="color: white;  margin-bottom: 15px; font-size: 26px;">Availed Overtime
+                            </button>
+                            <button class="btn btn-lg btn-block btn-primary" ng-click="viewcontent('leaves')"
+                                style="color: white;  margin-bottom: 15px; font-size: 26px;">Availed Leaves
+                            </button>
+                            <button class="btn btn-lg btn-block btn-danger" ng-click="viewcontent('lates')"
+                                style="color: white;  margin-bottom: 15px; font-size: 26px;">Lates & Absences
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-sm-12 col-xs-12" style="padding:5px;">
+                        <div class="col-xs-12 bg-aqua">
+                            <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 5px; font-size: 30px;">
+                                Birthdays & Anniversary
+                                <!-- <small style="color: white;">(Today's Date)</small> -->
+                            </h3>
+
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div style="height: 430px !important;">
+                                <div fc fc-options="calendarOptions" ng-model="events" class="calendar"> </div>
+                            </div>
+                        </div>
+                        <p ng-bind="valupdate[0].title" ng-model="valupdate"></p>
+                        <div class="col-xs-12 col-md-6" style="height: 430px;overflow-y: auto">
+
+                            <table class="example2 table table-bordered table-hover table-condensed table-striped"
+                                style="margin-top: 5px;">
+                                <thead> </thead>
+                                <tbody id="tr_bdays"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:15px">
+                <div class="col-lg-12">
+                    <div class="col-lg-6 col-sm-12 col-xs-12" style="padding: 5px;">
+                        <div class="col-xs-12 bg-primary" style="background-color : #7030a0 !important">
+                            <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 5px; font-size: 30px;">
+                                Announcement for the Month</h3>
+
+                        </div>
+                        <div class="col-xs-12" style="text-align:center;padding:0px;">
+                            <div class="box" style="border-top:none; min-height: inherit;box-shadow:none">
+                                <div class="table-responsive text-center">
+                                    <table id="aftm" style="margin-top: 20px;" class="example2 table table-hover fs">
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                    <div class="pagination row" ng-show="dashboard.values.dept_ctr.length > 0">
+                                        <dir-pagination-controls boundary-links="true" pagination-id="units_data_table"
+                                            template-url="view/page/dirPagination.html"></dir-pagination-controls>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 col-xs-12" style="padding:5px;">
+                        <div class="col-xs-12 bg-primary" style="background-color : #92d14f !important">
+                            <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 5px; font-size: 30px;">
+                                Resolution Center</h3>
+                        </div>
+                        <div class="col-xs-12" style="text-align:center;padding:0px;">
+                            <div class="box" style="border-top:none; min-height: inherit;box-shadow:none">
+                                <div class="table-responsive text-center">
+                                    <table id="rc" style="margin-top: 20px;" class="example2 table table-hover fs">
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                    <div class="pagination row" ng-show="dashboard.values.dept_ctr.length > 0">
+                                        <dir-pagination-controls boundary-links="true" pagination-id="units_data_table"
+                                            template-url="view/page/dirPagination.html"></dir-pagination-controls>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+
+    <div ng-include="footerTemplate"></div>
+
+</div>

@@ -1,0 +1,785 @@
+<style>
+    .main-footer {
+        background: #fff;
+        padding: 5px;
+        color: #444;
+        border-top: 1px solid #d2d6de;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        z-index: 999;
+    }
+
+    .content-wrapper {
+        background: white
+    }
+
+    .example2 th {
+        color: white;
+        background-color: #006ba6;
+        text-align: center
+    }
+
+    .btnTD {
+        text-align: center;
+    }
+
+    .info {
+        font-weight: bold;
+    }
+
+    .ui-widget-header {
+        border: 1px solid green;
+        background: #008d4c;
+        color: black;
+    }
+
+    .lightbox-modal {
+        z-index: 99999 !important;
+    }
+
+    .bder {
+        border: 0px solid black;
+    }
+
+    .table-striped>tbody>tr:nth-child(odd)>td,
+    .table-striped>tbody>tr:nth-child(odd)>th {
+        background-color: #d9e5f3;
+    }
+
+    table.dataTable>tbody>tr.child ul li {
+        border-bottom: 0px solid #efefef !important;
+    }
+
+    .req-field {
+        color: red;
+    }
+
+    .paddingZero {
+        padding: 0px !important;
+    }
+
+    .txtresize {
+        resize: vertical;
+        min-height: 110px !important;
+    }
+
+    .sec-head {
+        overflow: hidden;
+        animation: bgColor 8s normal forwards;
+    }
+
+    .bgPulse {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bgPulse span {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+
+    }
+
+    .bgPulse span:nth-child(2n+1) {
+        background: transparent;
+        border: 5px solid #fff;
+    }
+
+    .bgPulse span:nth-child(1) {
+        border-radius: 12px;
+        top: 30%;
+        left: 30%;
+        animation: animate 10s linear infinite;
+    }
+
+    .bgPulse span:nth-child(2) {
+        top: 20%;
+        left: 50%;
+        animation: animate 15s linear infinite;
+    }
+
+    .bgPulse span:nth-child(3) {
+        top: 40%;
+        left: 70%;
+        animation: animate 20s linear infinite;
+    }
+
+    .bgPulse span:nth-child(4) {
+        border-radius: 12px;
+        top: 60%;
+        left: 80%;
+        animation: animate 12s linear infinite;
+    }
+
+    .bgPulse span:nth-child(5) {
+        top: 60%;
+        left: 40%;
+        animation: animate 17s linear infinite;
+    }
+
+    .bgPulse span:nth-child(6) {
+        border-radius: 12px;
+        top: 60%;
+        left: 60%;
+        animation: animate 22s linear infinite;
+    }
+
+    .bgPulse span:nth-child(7) {
+        top: 60%;
+        left: 20%;
+        animation: animate 17s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: scale(0) translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.4;
+        }
+
+        100% {
+            transform: scale(1) translateY(-100px) rotate(360deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes bgColor {
+        0% {
+            background: #4ab8ff;
+        }
+
+        25% {
+            background: #30aeff;
+        }
+
+        50% {
+            background: #17a4ff;
+        }
+
+        100% {
+            background: #0099fc;
+        }
+    }
+
+
+    .fc-day-grid-container {
+        overflow: hidden auto !important;
+        height: 340px !important;
+    }
+
+    .fc-widget-header {
+        margin-right: 0px;
+    }
+
+    .fc-more-cell {
+        text-align: center;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    .fc-view-container {
+        border: 1px solid #ddd;
+    }
+
+    .fc-day-grid-event {
+        background: none;
+        border: 0px;
+        color: black !important;
+        cursor: pointer !important
+    }
+
+    .fc-today-button {
+        visibility: hidden
+    }
+
+    .fc-unthemed td.fc-today {
+        background: #cef98a;
+    }
+
+    .my-legend .legend-title {
+        text-align: left;
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-size: 90%;
+    }
+
+    .my-legend .legend-scale ul {
+        margin: 0;
+        padding: 0;
+        float: left;
+        list-style: none;
+    }
+
+    .my-legend .legend-scale ul li {
+        display: block;
+        float: left;
+        width: 50px;
+        margin-bottom: 6px;
+        text-align: center;
+        font-size: 80%;
+        list-style: none;
+    }
+
+    .my-legend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 25px;
+        width: 50px;
+        padding: 5px;
+    }
+
+    .my-legend .legend-source {
+        font-size: 70%;
+        color: #999;
+        clear: both;
+    }
+
+    .my-legend a {
+        color: #777;
+    }
+
+    .vap {
+        /* background-color: #ccc; */
+        background-color: white;
+        max-height: 400px !important;
+        margin-bottom: 15px;
+        border: 0.8px solid #d2d6de;
+    }
+
+    .radio {
+        margin-top: 0px !important;
+    }
+
+    @media screen and (max-width: 1280px) {
+        .m2-1280 {
+            width: 20%;
+        }
+
+        .m10-1280 {
+            width: 80%;
+        }
+
+        .sec-head {
+            height: 112px !important;
+            padding-top: 0px !important;
+        }
+
+        .p5 {
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+        }
+    }
+
+    .style-1::-webkit-scrollbar{
+		height:10px;
+		width:4px;
+		border-radius: 4px;
+		background: transparent;
+		transition: all 0.3s ease;
+	}
+	.style-1::-webkit-scrollbar:hover{
+		background: #c6c7ca;
+	}
+	.style-1::-webkit-scrollbar-thumb{
+		background: #777779;
+		border-radius: 4px;
+	}
+    .card {
+        background-color: #3F3D3F;
+        font-size: 1.3rem; 
+        height: 37rem;
+        margin-bottom: 2.2rem;
+        /*color: #D4BC8C;*/
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.41);
+      }
+      .card-simp {
+        background-color: #3F3D3F;
+        font-size: 1.3rem; 
+        height: 34rem;
+        margin-bottom: 2.2rem;
+        /*color: #D4BC8C;*/
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.41);
+      }
+      .card-def {
+        background-color: #201F20;
+        font-size: 1.3rem; 
+        height: 33rem;
+        margin-bottom: 2.2rem;
+        /*color: #D4BC8C;*/
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.41);
+      }
+</style> 
+<div class="wrapper" ng-controller="AndonController" ng-init="dashboard.active();">
+
+    <div class="main-header" ng-include="headerTemplate"></div>
+    <div class="main-sidebar" ng-include="leftNavigationTemplate"></div>
+
+    <div class="content-wrapper">
+        <spinner name="form01spinner" ng-cloak="">
+            <div class="overlay"></div>
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+            <div class="please-wait">Please Wait...</div>
+        </spinner> 
+        <section class="content-header sec-head"
+            style="height: 150px;color: white;text-shadow: 12;box-shadow: 0 8px 6px -6px black;">
+            <div style="font-size: 9em;/*color: #00a65a !important;*/">
+                <i class="fa"
+                    style="background: url('assets/images/mv.png');background-repeat: no-repeat;background-size: 115px;color: transparent;width: 120px;float: left;color:transparent">&nbsp;&nbsp;&nbsp;</i>
+                <div style="font-size: 12pt;padding-top: 15px;text-indent:15px">
+                    {{compensationCompanyName.company_name}}</div>
+                <div style="font-size: 20pt;text-indent:15px">NXPERT EON</div>
+                <div style="font-size: 15pt; text-indent:15px"> Andon</div>
+            </div>
+            <ol class="breadcrumb" style="margin-left:125px;background: #f5f5f5 !important">
+                <li><a href=".#/admin/home"><i class="fa fa-dashboard"></i> Realtime</a></li>
+                <li><a href=".#/admin/hr/dashboard"> Andon</a></li>
+                <!-- <li class="active">Operation Monitoring</li> -->
+            </ol>
+            <div class="bgPulse hidden-xs">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+ 
+        <section id="content" class="content" style="overflow-y:hidden;padding-bottom: 5px !important">
+            <!-- <div class="row"> -->
+            <div class="well row" style="background-color: white;height: auto !important;margin: 0px;" >
+                <div class="col-md-12 col-xs-12">
+                    <p><i class="fa fa-gear" aria-hidden="true"></i><label style="font-weight:600 !important">Search Option</label> </p> 
+                </div>
+                <div class="col-md-12 col-xs-12 paddingZero" style="margin-top: 10px;">
+                    <div class="col-md-3 col-xs-12">
+                        <div class="form-group">
+                            <label style="font-weight:600 !important">View</label>
+                            <select select2 class="form-control" ng-model="filter.view1" ng-change="select()" style="width:100%">
+                                <option value="mwi">Unselected</option>
+                                <option value="tt">Cebu Molding</option> 
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <select select2 class="form-control" ng-model="filter.view2" ng-change="select()" style="width:100%">
+                                <option value="mwi">Unselected</option>
+                                <option value="tt">Plastic Products</option> 
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <select select2 class="form-control" ng-model="filter.view3" ng-change="select()" style="width:100%">
+                                <option value="mwi">Unselected</option>
+                                <option value="tt">Manufacturing</option> 
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <select select2 class="form-control" ng-model="filter.view4" ng-change="select()" style="width:100%">
+                                <option value="mwi">Unselected</option>
+                                <option value="tt">Mold Sec. A</option> 
+                                <option value="tt">Mold Sec. B</option> 
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-md-12 col-xs-12 paddingZero" style="margin-top: 10px;">
+                    <div class="col-md-3 col-xs-12">
+                        <div class="form-group">
+                            <label style="font-weight:600 !important">Shift Pattern</label>
+                            <select select2 class="form-control" ng-model="filter.view5" ng-change="select()" style="width:100%">
+                                <option value="mwi">Unselected</option>
+                                <option value="tt">Normal Shift</option> 
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="col-md-3 col-xs-12">
+                        <div class="form-group">
+                            <label style="font-weight:600 !important">Display</label>
+                            <select select2 class="form-control" ng-model="display_andon" ng-change="select()" style="width:100%">
+                                <option value="def">Default</option> 
+                                <option value="simp">Simple</option>
+                                <option value="adv">Advance</option>
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-md-12 col-xs-12 paddingZero"> 
+                    <div class="col-md-3 col-xs-3"> 
+                    </div> 
+                    <div class="col-md-9 col-xs-9" style="padding-top: 35px;"> 
+                        <button class="pull-right btn btn-success" style="width:100px;margin:0px 0px 0px 5px; font-weight:600 !important" ng-click="updatesdand();">Show Data</button> 
+                    </div>
+                </div> 
+            </div>
+
+            
+            <!-- Operation Monitoring -->
+            <div class="col-md-12 col-xs-12">  
+                    <!-- <div class="col-md-12 col-xs-12">
+                        <div class="pull-left">
+                            <p style="padding-left: 10px;margin-top:7px;"> Show
+                                <select style="border: none; background-color: #F8F8F8;"
+                                    ng-model="paginationandon.pageSize">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="500">All</option>
+                                </select> entries
+                            </p> 
+                        </div>
+                        
+                    </div> -->
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <p class="pull-left" style="padding-left: 10px;margin-top:30px"> Show
+                                <select style="border: none; background-color: #F8F8F8;"
+                                    ng-model="paginationchart.pageSize">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option> 
+                                    <option value="500">500</option>
+                                </select> entries
+                            </p>
+                        </div>  
+                        <div class="col-md-6">  
+                            <pagination class="pull-right" ng-model="paginationchart.currentPage"
+                                total-items="paginationchart.totalItems" max-size="paginationchart.maxSize"
+                                items-per-page="paginationchart.pageSize" boundary-links="true">
+                            </pagination>
+                        </div>
+                    </div> 
+                    <div ng-if="display_andon == 'def'" class="col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-2 container" ng-repeat="andon in andondetails"> 
+                        <div class="card-def">
+                          <div class="card-header" style="color:white;background:{{andon.patlite_color}};padding:10px;font-weight:600 !important">
+                            <span style="background:black;color:white;padding:3px;font-size:x-small;">{{andon.id}}</span>
+                            <br><span style="padding-top:3px;font-size:medium;">{{andon.name}} </span>
+                          </div>
+                          <div class="card-body" style="overflow:hidden">
+                                <table id="tb" style="color:white;height: 28rem !important"> 
+                                    <thead>
+                                        <tr> 
+                                            <th rowspan="3" style="width:20%">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>&nbsp;</th>
+                                                            <th colspan="2" ng-if = "andon.patlite_color != '#E94B5B'" style="background:#2e0f12;border: 3px solid #201F20; ">&nbsp;&nbsp;&nbsp;&nbsp;</th> 
+                                                            <th colspan="2" ng-if = "andon.patlite_color == '#E94B5B'" style="background:#eb5d6b;border: 3px solid #201F20; ">&nbsp;&nbsp;&nbsp;&nbsp;</th> 
+                                                            <th>&nbsp;</th>
+                                                        </tr>
+                                                        <tr style="padding:20px">
+                                                            <th>&nbsp;</th>
+                                                            <th colspan="2" ng-if = "andon.patlite_color != '#FBA050'" style="background:#371a01;border: 3px solid #201F20; ">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                                            <th colspan="2" ng-if = "andon.patlite_color == '#FBA050'" style="background:#fbaa63;border: 3px solid #201F20; ">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                                            <th>&nbsp;</th>
+                                                        </tr>
+                                                        <tr style="padding:20px">
+                                                            <th>&nbsp;</th>
+                                                            <th colspan="2" ng-if = "andon.patlite_color != '#29C7A4'" style="background:#07241e;border: 3px solid #201F20; ">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                                            <th colspan="2" ng-if = "andon.patlite_color == '#29C7A4'" style="background:#40d8b6;border: 3px solid #201F20; ">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                                            <th>&nbsp;</th>
+                                                        </tr>
+                                                        <tr  ><th  >&nbsp;</th></tr>
+                                                        <tr  ><th  >&nbsp;</th></tr>
+                                                        <tr  ><th  >&nbsp;</th></tr>
+                                                    </thead>
+                                                </table>
+                                            </th>
+                                            <th rowspan="6" style="padding: 10px;color:#483C32;background:white">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th  style="font-size:large"><i class="fa fa-arrow" aria-hidden="true"></i> Utilization</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th >
+                                                                <span class="pull-right" style="font-size:xx-large">{{andon.utilization | number:2}}
+                                                                    <span style="font-size:medium">% 
+                                                                    </span>
+                                                                </span>
+                                                            </th>
+                                                        </tr> 
+                                                        <tr>
+                                                            <th  style="font-size:large"><i class="fa fa-arrow" aria-hidden="true"></i> Abnormal stop time</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th >
+                                                                <span class="pull-right" style="font-size:xx-large">{{andon.abnormal_stop_time}}
+                                                                    <span style="font-size:medium">Min 
+                                                                    </span>
+                                                                </span>
+                                                            </th>
+                                                        </tr> 
+                                                        <tr>
+                                                            <th  style="font-size:large"><i class="fa fa-arrow" aria-hidden="true"></i> Product count</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th >
+                                                                <span class="pull-right" style="font-size:xx-large">{{andon.production_count}}
+                                                                    <span style="font-size:medium">Units 
+                                                                    </span>
+                                                                </span>
+                                                            </th>
+                                                        </tr> 
+                                                    </thead>
+                                                </table>
+                                            </th> 
+                                        </tr> 
+                                    </thead> 
+                                </table>
+                          </div>   
+                        </div>  
+                    </div>  
+                    <div ng-if="display_andon == 'simp'" class="col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-2 container" ng-repeat="andon in andondetails"> 
+                        <div class="card-simp">
+                            <div class="card-header" style="color:white;background:{{andon.patlite_color}};padding:10px;font-weight:600 !important">
+                                <span style="background:black;color:white;padding:3px;font-size:x-small;">{{andon.id}}</span>
+                            <br><span style="padding-top:3px;font-size:medium;">{{andon.name}}</span>
+                            </div>
+                          <div class="card-body" style="overflow:hidden">
+                                <table id="tb" style="color:white;height: 28rem !important"> 
+                                    <thead>
+                                        <tr>  
+                                            <th rowspan="6" style="padding: 10px;color:#483C32;background:white">
+                                                <table>
+                                                    <thead>
+                                                        <tr style="border-bottom:3px solid #F5F5F5">
+                                                            <th style="font-size:large"> Utilization</th>
+                                                            <th > 
+                                                                <span class="pull-right" style="font-size:xx-large">{{andon.utilization | number :2}}
+                                                                    <span style="font-size:medium"> % 
+                                                                    </span>
+                                                                </span>
+                                                            </th>
+                                                        </tr> 
+                                                        <tr style="border-bottom:3px solid #F5F5F5">
+                                                            <th  style="font-size:large"> Run Time</th>
+                                                            <th > 
+                                                                <span class="pull-right" style="font-size:xx-large">{{andon.run_time | number :2}}
+                                                                    <span style="font-size:medium"> Min 
+                                                                    </span>
+                                                                </span>
+                                                            </th>
+                                                        </tr>  
+                                                        <tr style="border-bottom:3px solid #F5F5F5">
+                                                            <th  style="font-size:large">  Abnormal stop time</th>
+                                                            <th > 
+                                                                <span class="pull-right" style="font-size:xx-large">{{andon.abnormal_stop_time | number :2}}
+                                                                    <span style="font-size:medium"> Min 
+                                                                    </span>
+                                                                </span>
+                                                            </th>
+                                                        </tr> 
+                                                        <tr style="border-bottom:3px solid #F5F5F5">
+                                                            <th  style="font-size:large"> Abnormal stop count</th>
+                                                            <th > 
+                                                                <span class="pull-right" style="font-size:x-large">{{andon.abnormal_stop_count }}
+                                                                    <span style="font-size:medium"> Times 
+                                                                    </span>
+                                                                </span>
+                                                            </th>
+                                                        </tr>  
+                                                        <tr style="border-bottom:3px solid #F5F5F5">
+                                                            <th  style="font-size:large"> Longest downtime</th>
+                                                            <th > 
+                                                                <span class="pull-right" style="font-size:xx-large">{{andon.longest_downtime | number :2}}
+                                                                    <span style="font-size:medium"> Min 
+                                                                    </span>
+                                                                </span>
+                                                            </th>
+                                                        </tr> 
+                                                    </thead>
+                                                </table>
+                                            </th> 
+                                        </tr> 
+                                    </thead> 
+                                </table>
+                          </div>   
+                        </div>  
+                    </div>  
+                    <div ng-if="display_andon == 'adv'" class="col-xs-6 col-sm-4 col-md-4 col-lg-3 col-xl-2 container" ng-repeat="andon in andondetails"> 
+                        <div class="card">
+                            <div class="card-header" style="color:white;background:{{andon.patlite_color}};padding:10px;font-weight:600 !important">
+                                <span style="background:black;color:white;padding:3px;font-size:x-small;">{{andon.id}}</span>
+                                <br><span style="padding-top:3px;font-size:medium;">{{andon.name}}</span>
+                            </div>
+                          <div class="card-body" style="padding:10px;overflow:hidden">
+                                <table id="tb" style="color:white;">
+                                    <!-- background:#FF792B; -->
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">
+                                                Utilization
+                                            </th>
+                                            <th colspan="2">
+                                                Signal
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" style="font-size:xx-large">
+                                                {{andon.utilization | number:2}}
+                                            </td>
+                                            <td colspan="2">
+                                                <table>
+                                                    <thead>
+                                                        <tr  >
+                                                            <th ng-if = "andon.patlite_color != '#E94B5B'" style="background:#2e0f12;border: 3px solid #483C32">&nbsp;</th>
+                                                            <th ng-if = "andon.patlite_color == '#E94B5B'" style="background:#eb5d6b;border: 3px solid #483C32">&nbsp;</th>
+                                                        </tr>
+                                                        <tr  >
+                                                            <th ng-if = "andon.patlite_color != '#FBA050'" style="background:#371a01;border: 3px solid #483C32">&nbsp;</th>
+                                                            <th ng-if = "andon.patlite_color == '#FBA050'" style="background:#fbaa63;border: 3px solid #483C32">&nbsp;</th>
+                                                        </tr>
+                                                        <tr  >
+                                                            <th ng-if = "andon.patlite_color != '#29C7A4'" style="background:#07241e;border: 3px solid #483C32">&nbsp;</th>
+                                                            <th ng-if = "andon.patlite_color == '#29C7A4'" style="background:#40d8b6;border: 3px solid #483C32">&nbsp;</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </td>
+                                        </tr> 
+                                        <tr>
+                                            <!-- <td colspan="2" style="font-size:medium">
+                                                &nbsp;
+                                            </td>
+                                            <td colspan="2" style="font-size:medium">
+                                                &nbsp;
+                                            </td> -->
+                                            <th>
+                                                Target Count
+                                            </th>
+                                            <td style="font-size:x-large">
+                                                {{andon.target}}<span style="font-size:x-small"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Run Time
+                                            </th>
+                                            <td style="font-size:x-large">
+                                                {{andon.run_time}}<span style="font-size:x-small">Min</span>
+                                            </td>
+                                            <th>
+                                                Production count
+                                            </th>
+                                            <td style="font-size:x-large">
+                                                {{andon.production_count}}<span style="font-size:x-small"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Finished Goods
+                                            </th>
+                                            <td style="font-size:x-large">
+                                                {{andon.finished_goods}}<span style="font-size:x-small"></span>
+                                            </td>
+                                            <th>
+                                                Non Goods
+                                            </th>
+                                            <td style="font-size:x-large">
+                                                {{andon.no_good}}<span style="font-size:x-small"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Abnormal stop count
+                                            </th>
+                                            <td style="font-size:x-large"> 
+                                                {{andon.abnormal_stop_count}}<span style="font-size:x-small">Times</span>
+                                            </td>
+                                            <th>
+                                                Abnormal stop time
+                                            </th>
+                                            <td style="font-size:x-large">
+                                                {{andon.abnormal_stop_time}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Progress
+                                            </th>
+                                            <td style="font-size:x-large">
+                                                {{andon.progress_units01}}/{{andon.progress_units02}}<span style="font-size:x-small">Units</span>
+                                            </td>
+                                            <th>
+                                                Progress
+                                            </th>
+                                            <td style="font-size:x-large">
+                                                {{andon.progress_percent | number : 2}}<span style="font-size:x-small">%</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Progress
+                                            </th>
+                                            <td colspan="3" style="font-size:x-large; padding-top: 10px;">
+                                                <div class="progress" style="  border-radius: 25px;"> 
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="andon.progress_units01" aria-valuemin="0" aria-valuemax="andon.progress_units02" style="width:{{andon.progress_percent}}%">
+                                                        <span >{{andon.progress_percent | number : 2}}% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </td> 
+                                        </tr>
+                                    </tbody>
+                                </table>
+                          </div>   
+                        </div>  
+                    </div> 
+                    <div class="col-md-12" style="z-index:2">
+                        <div style="padding-left: 10px;" class="pull-left" role="status" aria-live="polite">
+                            Showing
+                            {{ (paginationandon.currentPage * paginationandon.pageSize) - (paginationandon.pageSize - 1)  }}
+                            to
+                            {{ (((paginationandon.currentPage * paginationandon.pageSize) - 1) + payregdetails.length) - (paginationandon.pageSize - 1)}}
+                            of
+                            {{paginationandon.totalItems}}
+                            entries
+                        </div> 
+                        <pagination class="pull-right" ng-model="paginationandon.currentPage"
+                            total-items="paginationandon.totalItems"
+                            max-size="paginationandon.maxSize"
+                            items-per-page="paginationandon.pageSize" boundary-links="true">
+                        </pagination>
+                    </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div ng-include=" footerTemplate"></div>
+
+</div>

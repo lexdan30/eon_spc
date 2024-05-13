@@ -1,0 +1,46 @@
+<?php
+require_once('../../../../classPhp.php'); 
+$data = array(     
+    "empid"                         => '',
+    "effectivedate"                 => '',
+    "actiontaken"                	=> "Promotion",
+    "empname"                       => '',
+    "currentdeptname"               => '',
+    "newdeptname"                   => '',
+    "currentdeptmanager"            => '',
+    "newdeptmanager"                => '',
+    "currentimmediatesupervisor"    => '',
+    "newimmediatesupervisor"        => '',
+    "currentsection"                => '',
+    "newsection"                    => '',
+    "currentempstatus"              => '',
+    "newempstatus"                  => '',
+    "currentjobcode"                => '',
+    "newjobcode"                    => '',
+    "currentjoblevel"               => '',
+    "newjoblevel"                   => '',
+    "currentpositiontitle"          => '',
+    "newpositiontitle"              => '',
+    "currentpaygroup"               => '',
+    "newpaygroup"                   => '',
+    "currentlabortype"              => '',
+    "newlabortype"                  => '',
+    "currentbasepay"                => '',
+    "newbasepay"                    => '',
+    "currentriceallowance"          => '',
+    "newriceallowance"              => '',
+    "currentclothingallowance"      => '',
+    "newclothingallowance"          => '',
+    "currentlaundryallowance"       => '',
+    "newlaundryallowance"           => '',
+    "currenttotalcashcomp"          => '',
+    "newtotalcashcomp"              => '',
+    "remarks"                       => '',
+    "doc_job_desc"					=> '',
+    "doc_perf_appr"					=> '',
+    "doc_promotion"					=> '',
+	"picFile"						=> array()
+);
+$return = json_encode($data);
+print $return;
+?>

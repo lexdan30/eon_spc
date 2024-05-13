@@ -1,0 +1,119 @@
+#loan {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#loan td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#loan tr:nth-child(even){background-color: #f2f2f2;}
+
+#loan tr:hover {background-color: #ddd;}
+
+#loan th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: left;
+  background-color: #006092;
+  color: white;
+  text-align: center;
+
+}
+.sss-loan-header{
+  display: flex;
+  height: 100px;
+  padding: 10px;
+ }
+ 
+ 
+ .sss-loan-header-1{
+     flex: 1;
+ }
+ 
+ .sss-loan-header-2{
+     flex: 1;
+     display: flex;
+     align-items:center;
+     justify-content: center;
+ }
+ 
+ 
+ .sss-loan-header-3{
+     flex: 1;
+ }
+ /* tfoot>th{
+     border: 1px white solid;
+ } */
+ /* .sss-bg{
+      border: 1px white solid;
+      background-color: #006092;
+      color: white;
+      padding-top: 12px;
+      padding-bottom: 12px;
+ } */
+
+
+
+#loan2 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #loan2 td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #loan2 tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #loan2 tr:hover {background-color: #ddd;}
+  
+  #loan2 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: left;
+    background-color: #006092;
+    color: white;
+    text-align: center;
+ 
+  }
+  .sss-loan2-header{
+    display: flex;
+    height: 100px;
+    padding: 10px;
+   }
+   
+   
+   .sss-loan2-header-1{
+       flex: 1;
+   }
+   
+   .sss-loan2-header-2{
+       flex: 1;
+       display: flex;
+       align-items:center;
+       justify-content: center;
+   }
+   
+   
+   .sss-loan2-header-3{
+       flex: 1;
+   }
+   /* tfoot>th{
+       border: 1px white solid;
+   } */
+   /* .sss-bg{
+        border: 1px white solid;
+        background-color: #006092;
+        color: white;
+        padding-top: 12px;
+        padding-bottom: 12px;
+   } */

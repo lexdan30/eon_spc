@@ -1,0 +1,373 @@
+<!-- <div class="row" style="height: auto;"> -->
+    <!-- <div class="col-md-12 col-xs-12" style="border-bottom: 5px solid rgb(68, 68, 68); "> -->
+        <!-- <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 10px;">Total Overtime -->
+        <!-- </h3> -->
+        <!-- <button class="btn btn-primary pull-right" onclick="window.location.reload();"><i class="fa fa-arrow-left" -->
+                <!-- aria-hidden="true"> </i> Back to Dashboard</button> -->
+    <!-- </div> -->
+    <!-- <div class="col-md-4 col-xs-12" style="padding: 7px;"> -->
+        <!-- <div class="fOThit" style="background-color: #9dc3e7;  margin-top: 10px; padding-top: 10px;"> -->
+            <!-- <div class="col-md-6 col-xs-12" ng-init="getTotalYTD()"> -->
+                <!-- <div class="panel panel-default"> -->
+                    <!-- <div class="panel-body text-center fsto"> -->
+                        <!-- <p class="nomargin">{{totalemployeesYTD[0].tot_units}}</p> -->
+                        <!-- <p class="nomargin">YTD OT Hours</p> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-6 col-xs-12"> -->
+                <!-- <div class="panel panel-default"> -->
+                    <!-- <div class="panel-body text-center fsto"> -->
+                        <!-- <p class="nomargin">₱ {{totalemployeesYTD[0].getTotAmt[0].amount}}</p> -->
+                        <!-- <p class="nomargin">YTD OT Amount</p> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-12 col-xs-12" style="height: 200px; margin-bottom: 50px;" ng-init="barchartdivyear();"> -->
+                <!-- <div class="col-md-8 col-xs-6"> -->
+                    <!-- <h3 class="text-black text-left" style="margin-top: 0px;">Overtime by Year </h3> -->
+                <!-- </div> -->
+                <!-- <div class="col-md-4 col-xs-6">  -->
+                    <!-- <select class="form-control text-right" ng-model="search_year" ng-change="barchartdivyear()"> -->
+                        <!-- <option value="">Select Year</option> -->
+                        <!-- <option ng-repeat="data in yearss track by $index" value="{{data}}">{{data}}</option> -->
+                    <!-- </select> -->
+              <!-- </div> -->
+              <!-- <div style="width:99%"> -->
+                <!-- <canvas id="bar1" class="chart-bar ng-isolate-scope graphs1" ></canvas> -->
+            <!-- </div> -->
+
+            <!-- </div> -->
+            <!-- <div class="col-md-12" style="height: 200px; margin-bottom: 50px;" ng-init="barchartdivmonth();"> -->
+                <!-- <div class="col-md-8 col-xs-6"> -->
+                    <!-- <h3 class="text-black text-left" style="margin-top: 0px;">Overtime by Month</h3> -->
+                <!-- </div> -->
+                <!-- <div class="col-md-4 col-xs-6"> -->
+                    <!-- <select class="form-control text-right" ng-model="search_month" ng-change="barchartdivmonth()"> -->
+                        <!-- <option value="">Select Month</option> -->
+                        <!-- <option value="1">January</option> -->
+                        <!-- <option value="2">February</option> -->
+                        <!-- <option value="3">March</option> -->
+                        <!-- <option value="4">April</option> -->
+                        <!-- <option value="5">May</option> -->
+                        <!-- <option value="6">June</option> -->
+                        <!-- <option value="7">July</option> -->
+                        <!-- <option value="8">August</option> -->
+                        <!-- <option value="9">September</option> -->
+                        <!-- <option value="10">October</option> -->
+                        <!-- <option value="11">November</option> -->
+                        <!-- <option value="12">December</option> -->
+                    <!-- </select> -->
+                <!-- </div> -->
+                <!-- <div style="width:99%"> -->
+                    <!-- <canvas id="bar2" class="chart-bar graphs2"></canvas> -->
+                <!-- </div> -->
+                
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+
+
+    <!-- <div class="col-md-4 col-xs-12" style="padding: 7px;"> -->
+        <!-- <div style="background-color: #dbdbdb; height: 650px; margin-top: 10px; "> -->
+            <!-- <div class="col-md-12" style=" padding-bottom: 10px;"> -->
+                <!-- <h3 style="text-indent: 50px;" class="text-black text-center"> -->
+                    <!-- Date Range -->
+                    <!-- <input id="dtrange_ot" type="text" -->
+                        <!-- class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched pull fsi" ng-model="search_date" ng-change="piechartdivs()"> -->
+                <!-- </h3> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-12" style="height: 200px; margin-bottom: 100px;" ng-init="piechartdivs()"> -->
+                <!-- <h3 class="text-black text-center" style="margin-top: 0px;">Schedule Hours vs Duty Hours</h3> -->
+  
+                    <!-- <canvas id="pie" class="chart chart-pie chart-xs" chart-data="pie_data1" -->
+                    <!-- chart-labels="pie_labels1" chart-colors="pie_colour1" -->
+                    <!-- chart-options="pie_options1" legend="true" -->
+                    <!-- style="height: 160px;" width="420" ></canvas> -->
+                
+                    <!-- <span class="legend-scale text-center p15"></span> -->
+
+            <!-- </div> -->
+            <!-- <div class="col-md-12" style="height: 200px; margin-bottom: 50px;" ng-init="barchartdivsOTbyTrans();"> -->
+                <!-- <h3 class="text-black text-center" style="margin-top: 0px;">Overtime by Transaction</h3> -->
+                <!-- <div style="width:99%"> -->
+                    <!-- <canvas id="bar3" class="chart-bar graphs3"></canvas> -->
+                <!-- </div> -->
+                
+
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+
+
+    <!-- <div class="col-md-4 col-xs-12" style="padding: 7px; margin-bottom: 10px;"> -->
+        <!-- <div style="background-color: #f8cbac; height: 650px; margin-top: 10px; padding-top: 10px;"> -->
+            <!-- <div class="col-md-12" style=" padding-bottom: 10px;"> -->
+                <!-- <div class="col-md-6"> -->
+                    <!-- <div class="form-group"> -->
+                        <!-- <label>Company</label> -->
+                        <!-- <select class="form-control" disabled> -->
+                            <!-- <option>{{compensationCompanyName.company_name}}</option> -->
+                        <!-- </select> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="col-md-6"> -->
+                    <!-- <div class="form-group"> -->
+                        <!-- <label>Cost Center</label> -->
+                        <!-- <select class="form-control" id="costce" ng-model="costcenter" ng-change="totalempOT()" -->
+                        <!-- ng-options="dept.id as dept.costcenter for dept in dashboard.values.department | filter: typeLimit track by dept.id"> -->
+                            <!-- <option value="">ALL</option> -->
+                        <!-- </select> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="col-md-6"> -->
+                    <!-- <div class="form-group"> -->
+                        <!-- <label>Department</label> -->
+                            <!-- <select class="form-control" id="short3unit" ng-model="department" ng-change="totalempOT()" -->
+                        <!-- ng-options="dept.id as dept.name for dept in dashboard.values.department | filter: typeLimit track by dept.id"> -->
+                            <!-- <option value="">ALL</option> -->
+                        <!-- </select> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="col-md-6"> -->
+                    <!-- <div class="form-group"> -->
+                        <!-- <label>Location</label> -->
+                        <!-- <select class="form-control" id="jobloc" ng-model="jobloc" ng-change="totalempOT()" -->
+                        <!-- ng-options="jobloc.id as jobloc.loc for jobloc in dashboard.values.joblocation | filter: typeLimit track by jobloc.id"> -->
+                            <!-- <option value="">ALL</option> -->
+                        <!-- </select> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="col-md-12 p5" ng-init="totalempOT()"> -->
+                <!-- <div class="col-md-12"> -->
+                    <!-- <div class="wpnnotiOT style-15notiOT text-center bhOT" -->
+                    <!-- ng-init="notifications()"> -->
+                        <!-- <table class="example2 table table-bordered table-hover table-condensed table-striped " -->
+                            <!-- style="background-color: white;"> -->
+                            <!-- <thead> -->
+                                <!-- <tr> -->
+                                    <!-- <th style="background-color: rgb(41, 40, 40);">Employee</th> -->
+                                    <!-- <th style="background-color: rgb(41, 40, 40);">Amount</th> -->
+                                    <!-- <th style="background-color: rgb(41, 40, 40);">OTHrs</th> -->
+                                    <!-- <th style="background-color: rgb(41, 40, 40);">Fulltime</th> -->
+                                <!-- </tr> -->
+                            <!-- </thead> -->
+                            <!-- <tbody> -->
+                                    <!-- <tr ng-repeat="view in totalemployeesOT track by $index" ng-if="view.total_OTHrs!=0"> -->
+                                    <!-- <td class="text-left">{{view.empname}}</td> -->
+                                    <!-- <td class="text-center" ng-repeat="viewz in view.total_amount track by $index">{{viewz.amount}}</td> -->
+                                    <!-- <td class="text-center">{{view.total_OTHrs}}</td> -->
+                                <!-- </tr> -->
+                            <!-- </tbody> -->
+                        <!-- </table> -->
+                  
+                    <!-- </div> -->
+                <!-- </div> -->
+               
+            <!-- </div> -->
+
+        <!-- </div> -->
+    <!-- </div> -->
+
+
+<!-- </div> -->
+
+<div class="row" style="height: auto;">
+    <div class="col-md-12 col-xs-12" style="border-bottom: 5px solid rgb(68, 68, 68); ">
+        <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 10px;">Total Overtime
+        </h3>
+        <button class="btn btn-primary pull-right" onclick="window.location.reload();"><i class="fa fa-arrow-left"
+                aria-hidden="true"> </i> Back to Dashboard</button>
+    </div>
+
+    <div class="col-md-12" style="padding-bottom: 20px;">
+        
+        <div class="col-md-4 col-xs-12" style="padding: 7px; margin-bottom: 10px;">
+            
+            <div style="background-color: #ec711e;color:white; height: 650px; margin-top: 10px; padding-top: 10px; border:4px solid #ae4f0f; border-radius: 25px;">
+                
+                <div class="col-md-12" style=" padding-bottom: 10px;">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Company</label>
+                            <select class="form-control" disabled>
+                                <option>{{compensationCompanyName.company_name}}</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Cost Center</label>
+                            <select class="form-control" id="costce" ng-model="costcenter" ng-change="totalempOT()"
+                            ng-options="dept.id as dept.costcenter for dept in dashboard.values.department | filter: {costcenter:'!!'} track by dept.id">
+                                <option value="">ALL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Department</label>
+                                <select class="form-control" id="short3unit" ng-model="department" ng-change="totalempOT()"
+                            ng-options="dept.id as dept.name for dept in dashboard.values.department | filter: typeLimit track by dept.id">
+                                <option value="">ALL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Location</label>
+                            <select class="form-control" id="jobloc" ng-model="jobloc" ng-change="totalempOT()"
+                            ng-options="jobloc.id as jobloc.loc for jobloc in dashboard.values.joblocation | filter: typeLimit track by jobloc.id">
+                                <option value="">ALL</option>
+                            </select>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-md-12 p5" ng-init="totalempOT()">
+                    
+                    <div class="col-md-12">
+                        <div class="wpnnotiOT style-15notiOT text-center bhOT"
+                        ng-init="notifications()">
+                        
+                            <table class="example2 table table-bordered table-hover table-condensed table-striped "
+                                style="background-color: white;">
+                                
+                                <thead>
+                                    <tr ng-if="totalemployeesOT.length != 0">
+                                        <th style="background-color: rgb(41, 40, 40);">Employee</th>
+                                        <!-- <th style="background-color: rgb(41, 40, 40);">Amount</th> -->
+                                        <th style="background-color: rgb(41, 40, 40);">OT Hours</th>
+                                        <th style="background-color: rgb(41, 40, 40);">Work Hours</th>
+                                    </tr>
+                                    <tr ng-if="totalemployeesOT.length == 0">
+                                        <th style="background-color:grey;" colspan="3">Processing...</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr ng-repeat="view in totalemployeesOT track by $index" ng-if="view.total_OTHrs!=0 && view.total_OTHrs!=null">
+                                        <td class="text-left" style="color: black !important">{{view.empname}}</td>
+                                        <!-- <td class="text-center" ng-repeat="viewz in view.total_amount track by $index">{{viewz.amount}}</td> -->
+                                        <td class="text-center" style="color: black !important">{{view.total_OTHrs}}</td>
+                                         <td class="text-center" style="color: black !important">{{view.total_WHrs}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    
+                        </div>
+                    </div>
+                
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="col-md-4 col-xs-12" style="padding: 7px;">
+            <div class="fOThit" style="background-color: #00A65A;  margin-top: 10px; padding-top: 10px; border:4px solid #00A65A; border-radius: 25px;">
+                <div class="col-md-6 col-xs-12" ng-init="getTotalYTD()">
+                    <div class="panel panel-default">
+                        <div class="panel-body text-center fsto">
+                            <p class="nomargin">{{totalemployeesYTD[0].tot_units}}</p>
+                            <p class="nomargin">YTD OT Hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12" ng-init="getTotalYTD()">
+                    <div class="panel panel-default">
+                        <div class="panel-body text-center fsto">
+                            <p class="nomargin">{{totalemployeesYTD[0].count}}</p>
+                            <p class="nomargin">YTD OT Count</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body text-center fsto">
+                            <p class="nomargin">₱ {{totalemployeesYTD[0].getTotAmt[0].amount}}</p>
+                            <p class="nomargin">YTD OT Amount</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="col-md-12" style=" padding: 20px 0 20px !important;background-color: white !important;"> 
+                    <div class="col-md-12 col-xs-12" style="background-color: white !important;height: 200px;" ng-init="barchartdivyear();">
+                        <div class="col-md-8 col-xs-6">
+                            <h3 class="text-black text-left" style="margin-top: 0px;">Overtime by Year </h3>
+                        </div>
+                        <div class="col-md-4 col-xs-6"> 
+                            <select  id="selectyr" class="form-control text-right" ng-model="search_year" ng-change="barchartdivyear()">
+                                <option value="">Select Year</option>
+                                <option ng-repeat="data in yearss track by $index" value="{{data}}">{{data}}</option>
+                            </select>
+                    </div>
+                    <div style="width:99%">
+                        <canvas id="bar1" class="chart-bar ng-isolate-scope graphs1" ></canvas>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-12" style=" padding: 20px 0 40px;background-color: white !important;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px">               
+                    <div class="col-md-12" style="background-color: white !important;height: 200px;position:relative;overflow-x:scroll;" ng-init="barchartdivmonth();">
+                        <div class="col-md-8 col-xs-6">
+                            <h3 class="text-black text-left" style="margin-top: 0px;">Overtime by Month</h3>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <select  id="selectmonth" class="form-control text-right" ng-model="search_month" ng-change="barchartdivmonth()">
+                                <option value="">Select Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        <div style="width:2000px;height:200px;position:obsolute;">
+                            <canvas id="bar2" class="chart-bar graphs2" style="width:2000px;height:300px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 col-xs-12" style="padding: 7px;">
+            <div style=" border:4px solid #575757; border-radius: 25px;background-color: #dbdbdb; height: 650px; margin-top: 10px; ">
+                <div class="col-md-12" style=" padding-bottom: 10px;">
+                    <h3 style="text-indent: 50px;" class="text-black text-center">
+                        Date Range
+                        <input id="dtrange_ot" type="text"
+                            class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched pull fsi" ng-model="search_date" ng-change="piechartdivs()">
+                    </h3>
+                </div>
+                <div class="col-md-12" style="height: 200px; margin-bottom: 100px;" ng-init="piechartdivs()">
+                    <h3 class="text-black text-center" style="margin-top: 0px;">Schedule Hours vs Actual Duty Hours</h3>
+    
+                        <canvas id="pie" class="chart chart-pie chart-xs" chart-data="pie_data1"
+                        chart-labels="pie_labels1" chart-colors="pie_colour1"
+                        chart-options="pie_options1" legend="true"
+                        style="height: 160px;" width="420" ></canvas>
+                    
+                        <span class="legend-scale text-center p15"></span>
+
+                </div>
+                <div class="col-md-12" style="height: 200px; margin-bottom: 50px;" ng-init="barchartdivsOTbyTrans();">
+                    <h3 class="text-black text-center" style="margin-top: 0px;">Overtime by Transaction</h3>
+                    <div style="width:99%">
+                        <canvas id="bar3" class="chart-bar graphs3"></canvas>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

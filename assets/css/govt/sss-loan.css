@@ -1,0 +1,22 @@
+.sss-loan-header{
+ display: flex;
+ height: 100px;
+ padding: 10px;
+}
+
+
+.sss-loan-header-1{
+    flex: 1;
+}
+
+.sss-loan-header-2{
+    flex: 1;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+
+.sss-loan-header-3{
+    flex: 1;
+}

@@ -1,0 +1,74 @@
+.wage-row1{
+    display:flex;
+   height: 45px;
+   border-top: 1px #333 solid !important;
+  }
+  .wage-row1-1{
+    flex:1;
+  }
+  .wage-row1-2{
+    flex:1;
+  }
+  .pull-right{
+   text-align: right !important;
+  }
+  .wage-row2{
+    display:flex;
+   height: 45px;
+   justify-content: center;
+   align-items: center;
+  }
+  .wage-row3{
+    display:flex;
+   height: auto;
+   flex-direction: column;
+  }
+  .wage-line{
+    display:flex;
+   height: 30px;
+   width: 100%;
+   align-items: center;
+  }
+  .wage-box{
+    display:flex;
+   height: auto;
+   min-height:45px;
+   border: 1px #333 solid !important;
+   flex-direction: row;
+  }
+  
+  .wage-col{
+   border-right: 1px #333 solid !important;
+   flex: 1;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   min-height:45px;
+  }
+  .wage-colast{
+   flex: 1;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   min-height:45px;
+  }
+  .bline{
+   border-bottom: 1px #333 solid !important;
+   width:100px!important;
+  }
+  .wage-box1{
+    display:flex;
+   height: auto;
+   min-height:23px;
+   flex-direction: row;
+  }
+  div#container textarea {
+   overflow-y: hidden; /* prevents scroll bar flash */
+   padding-top: 1.1em; /* prevents text jump on Enter keypress */
+  }
+  .select2-container--default .select2-selection--single {
+   text-align-last: left !important;
+  }

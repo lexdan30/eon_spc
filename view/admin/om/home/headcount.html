@@ -1,0 +1,63 @@
+<style>
+	.print-only{
+		display: none;
+	}
+	
+	@media print {
+		.no-print {
+			display: none;
+		}
+	
+		.print-only{
+			display: block;
+		}
+	}
+
+</style>
+<div class="row" style="height: 100vh; padding-top:15px"  ng-init="headcount_functions.total_range()">
+    <!-- headcount_functions.total_range() -->
+    <div class="col-xs-12" style="border-bottom: 5px solid rgb(68, 68, 68); padding-right:25px;padding-left:25px" ng-init="headcount_functions.total_emp()">
+        <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 10px;font-weight:600 !important">
+            {{emptoday}} of {{ totemp }} Employees as of {{ headcount_functions.values.datecurr }}
+        </h3>
+        <button class="btn btn-primary pull-right" onclick="window.location.reload();"><i class="fa fa-arrow-left" aria-hidden="true"> </i> Back to Dashboard</button>
+        <!-- <button class="btn btn-primary pull-right" ng-click="printHeadcount('print-headcount')" title="Print/Save to PDF" style="margin-right:3px;background: #00a65a; border: 1px solid #00a65a;"><i class="fa fa fa-print fa-sm" style="padding:3px"></i>Print</button>
+                        -->
+        <button class="btn btn-primary pull-right" ng-click="PrintImage()" title="Print/Save to PDF" style="margin-right:3px;background: #00a65a; border: 1px solid #00a65a;"><i class="fa fa fa-print fa-sm" style="padding:3px"></i>Print</button>
+           
+    </div> 
+    <div class="col-xs-12">
+       
+        <div class="col-xs-12 text-center">
+            <h3 style="text-indent: 50px;" class="text-black">
+                Date Range <input id="dtrangeLine" type="text" style="border: none;border-bottom: 1px solid;text-align-last: center;" class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched pull" >
+            </h3> 
+        </div> 
+        <h3 class="text-black text-center">Headcount by Department</h3>
+		<h4 class="text-black text-center" ng-show="headcount_functions.values.rangetot > 0" >{{ headcount_functions.values.rangetot + ' Total Employees' }} </h4>
+		<div id="ChartContent" style="overflow:auto;height:60vh">
+            <canvas id="Chart1" style="height:100px;width:300px" height="100"></canvas>
+        </div>
+    </div>
+<!-- print age dist -->
+<!-- <div id="print-headcount" class="print-only" style="color:black">
+    <div>
+        <div class="col-xs-12" style="border-bottom: 5px solid rgb(68, 68, 68); padding-right:25px;padding-left:25px">
+            <h3 class="pull-left" style="margin-top: 5px; margin-bottom: 10px;font-weight:600 !important">
+                {{emptoday}} of {{ totemp }} Employees as Of {{ headcount_functions.values.datecurr }}
+            </h3>
+        </div>
+        <div class="col-xs-12" >
+            <div class="col-xs-12 text-center">
+                <h3 style="text-indent: 50px;" class="text-black">
+                    Date Range <input id="dtrangeLine" type="text" style="border: none;border-bottom: 1px solid;text-align-last: center;" class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched pull" >
+                </h3> 
+            </div> 
+            <h3 class="text-black text-center">Headcount by Department</h3>
+                <canvas id="Chart1"></canvas>
+    
+        </div>
+    </div>
+</div> -->
+<!-- print age dist -->
+</div>

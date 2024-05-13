@@ -1,0 +1,191 @@
+<!-- Left side column. contains the logo and sidebar -->
+
+<!-- sidebar: style can be found in sidebar.less -->
+<style>
+    .style-15::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 0px;
+    }
+
+    .style-15::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+    }
+
+    .style-15::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: #FFF;
+        background-image: -webkit-gradient(linear,
+                40% 0%,
+                75% 84%,
+                from(#005B96),
+                to(#005B96),
+                color-stop(.6, #007ac9))
+    }
+	.sidebar1280 {
+		overflow: auto;
+		height: 100vh;
+		padding-bottom:160px;
+	}
+	.content {
+		padding-bottom: 100px;
+	}
+</style>
+<section class="sidebar style-15">
+      <!-- Sidebar user panel -->
+      <div class="user-panel" style="height: 40px !important;">
+		<div class="pull-left image">
+		  <img ng-src="{{ dashboard.values.userInformation.pic }}" style="width:25px" class="img-circle" alt="User Image">
+		</div>
+		<div class="pull-left info">
+		  <p>{{ dashboard.values.userInformation.fname + ' ' + dashboard.values.userInformation.lname }}</p>
+		</div>
+	  </div>
+
+	  <div class="user-panel" style="height: 60px !important;">
+		<div class="pull-left image" >
+		  <img ng-src="{{ dashboard.values.userInformation.logo }}" style="width:45px" alt="User Image">
+		</div>
+		<div class="pull-left info">
+		  <p style="color: aliceblue; text-align: center; ">{{ dashboard.values.userInformation.company }}</p> 
+		</div>
+	  </div> 
+
+    <ul class="sidebar-menu" ng-init="activeclass()">   
+		<!-- analysis --> 
+		<!-- <li class="treeview" id="header-esetting">
+			<a href="">
+				<i class="fa fa-fw fa-line-chart" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Analysis</span><i class="fa fa-angle-left pull-right"></i>
+			</a>
+			<ul id="esetting" class="treeview-menu"> 
+				<li id="dashb">
+					<a href="#/analysis/dashboard-chart" >
+						<i style="background: url('assets/images/icons/sidebar/hr/Dashboard.webp');background-repeat: no-repeat;background-size: 17px;color:transparent;margin-right: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Dashboard</span>        
+					</a>
+				</li> 	
+				<li id="dashboard" >
+					<a id="dashboard" href="#/andon">
+					<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>KPI Details</span>        
+					</a>
+				</li>
+				<li id="employees" >
+					<a href="#/andon" >
+						<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>KPI Report</span>        
+					</a>
+				</li> 
+				<li id="employees" >
+					<a href="#/andon" >
+						<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Operational status report</span>        
+					</a>
+				</li> 
+				<li id="employees" >
+					<a href="#/andon" >
+						<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Operational status <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type analysis</span>        
+					</a>
+				</li> 
+				<li id="employees" >
+					<a href="#/andon" >
+						<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Operational Status Summary</span>        
+					</a>
+				</li> 
+				<li id="employees" >
+					<a href="#/andon" >
+						<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Operational Status Export</span>        
+					</a>
+				</li> 
+			</ul>
+		</li>   -->
+		<li class="header">ANALYSIS</li>
+		<li id="dashb">
+			<a href="#/analysis/dashboard-chart" >
+				<i style="background: url('assets/images/icons/sidebar/hr/Dashboard.webp');background-repeat: no-repeat;background-size: 17px;color:transparent;margin-right: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Dashboard</span>        
+			</a>
+		</li> 
+		<li id="mashdt">
+			<a href="#/analysis/machinedowntime" >
+				<i style="background: url('assets/images/icons/sidebar/hr/Dashboard.webp');background-repeat: no-repeat;background-size: 17px;color:transparent;margin-right: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Machine Downtime</span>        
+			</a>
+		</li> 
+		<!-- <li id="kpid" >
+			<a id="dashboard" href="#/analysis/kpi-details">
+			<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>KPI Details</span>        
+			</a>
+		</li>
+		<li id="kpir" >
+			<a href="#/analysis/kpi-report" >
+				<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>KPI Report</span>        
+			</a>
+		</li> 
+		<li id="opsr" >
+			<a href="#/analysis/operation-stat-report" >
+				<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Operational Status Report</span>        
+			</a>
+		</li> 
+		<li id="opsta" >
+			<a href="#/analysis/operation-stat-type-analysis" >
+				<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Operational Status <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type Analysis</span>        
+			</a>
+		</li> 
+		<li id="opss" >
+			<a href="#/analysis/operation-stat-summary" >
+				<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Operational Status Summary</span>        
+			</a>
+		</li> 
+		<li id="opse" >
+			<a href="#/analysis/operation-stat-export" >
+				<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Operational Status Export</span>        
+			</a>
+		</li>    -->
+		<!-- analysis -->
+		<!-- realtime -->
+		<li class="treeview" id="header-esetting">
+			<a href="">
+				<i class="fa fa-fw fa-bolt" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>REALTIME</span><i class="fa fa-angle-left pull-right"></i>
+			</a>
+			<ul id="esetting" class="treeview-menu"> 
+				<li id="andon">
+					<a href="#/realtime/andon" >
+						<i style="background: url('assets/images/icons/sidebar/hr/Dashboard.webp');background-repeat: no-repeat;background-size: 17px;color:transparent;margin-right: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Andon</span>        
+					</a>
+				</li> 	
+				<li id="eqchart" >
+					<a id="eqchart" href="#/realtime/eqchart">
+						<i class="fa fa-fw fa-industry">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Equipment Chart</span>        
+					</a>
+				</li>
+				<li id="employees" >
+					<a id="eqlist" href="#/realtime/eqlist">
+						<i class="fa fa-circle-o text-blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Equipment List</span>        
+					</a>
+				</li>  
+			</ul>
+		</li> 
+		<!-- realtime -->
+		<!-- masters -->
+		<li class="header">SETTINGS</li> 
+		<li id="kpid" >
+			<a id="dashboard" href="#/settings/planner">
+			<i class="fa fa-cog">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Planner Master</span>        
+			</a>
+		</li>
+		<li id="kpir" >
+			<a href="#/settings/machine" >
+				<i class="fa fa-cog">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Machine Master</span>        
+			</a>
+		</li> 
+		<li id="opsr" >
+			<a href="#/settings/material" >
+				<i class="fa fa-cog">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Material Master</span>        
+			</a>
+		</li> 
+		<li id="opsta" >
+			<a href="#/settings/operator" >
+				<i class="fa fa-cog">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i><span>Operator Master</span>        
+			</a>
+		</li>  
+		<!-- masters -->  
+    </ul>
+    </section>
+    <!-- /.sidebar -->
+  
